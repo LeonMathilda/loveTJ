@@ -7,12 +7,39 @@
 //
 
 #import "GMAppDelegate.h"
-
+#import "BaseNavViewController.h"
+#import "BaceViewController.h"
+#import "HomePageViewController.h"
+#import "GMFirstViewController.h"
+#import "GMSecondViewController.h"
+#import "GMfourthViewController.h"
 @implementation GMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    BaseNavViewController *homeController=[[BaseNavViewController alloc]initWithRootViewController:[[HomePageViewController alloc]init]];
+    
+    UITabBarItem *itemHome = [[UITabBarItem alloc]initWithTitle:@"资讯" image:[UIImage imageNamed:@"all-news-onclick"] selectedImage:[UIImage imageNamed:@"all-news-blue"]];
+    homeController.tabBarItem = itemHome;
+    
+    BaseNavViewController *FirstController=[[BaseNavViewController alloc]initWithRootViewController:[[GMFirstViewController alloc]init]];
+    UITabBarItem *itemFirst = [[UITabBarItem alloc]initWithTitle:@"论坛" image:[UIImage imageNamed:@"all-bar-on"] selectedImage:[UIImage imageNamed:@"all-bar-blue"]];
+    FirstController.tabBarItem = itemFirst;
+    
+    
+    BaseNavViewController *SecondController=[[BaseNavViewController alloc]initWithRootViewController:[[GMSecondViewController alloc]init]];
+    UITabBarItem *itemSecond = [[UITabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"all-found-on"] selectedImage:[UIImage imageNamed:@"all-found-blue"]];
+    SecondController.tabBarItem = itemSecond;
+    
+    BaseNavViewController *FourthController=[[BaseNavViewController alloc]initWithRootViewController:[[GMfourthViewController alloc]init]];
+    UITabBarItem *itemFourth = [[UITabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"all-me-on"] selectedImage:[UIImage imageNamed:@"all-me-blue"]];
+    FourthController.tabBarItem = itemFourth;
+    
+    UITabBarController *tabbar=[[UITabBarController alloc]init];
+    tabbar.viewControllers=[NSArray arrayWithObjects:homeController,FirstController,SecondController,FourthController, nil];
+    self.window.rootViewController=tabbar;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

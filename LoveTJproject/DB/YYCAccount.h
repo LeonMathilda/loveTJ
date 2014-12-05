@@ -9,7 +9,7 @@
 #import "MojoModel.h"
 #import "JTDateMappings.h"
 #import "NSObject+JTObjectMapping.h"
-#import <ShareSDK/ShareSDK.h>
+//#import <ShareSDK/ShareSDK.h>
 @class YYCAccount;
 typedef void(^loginBlock)(YYCAccount *account, BOOL loginFirstTime);
 
@@ -32,11 +32,11 @@ typedef void(^loginBlock)(YYCAccount *account, BOOL loginFirstTime);
 
 + (NSString*)token;
 
-+ (void)loginWithBlock:(loginBlock)block;
+//+ (void)loginWithBlock:(loginBlock)block;
 
 + (void)logout;
 
-+ (void)bindShareWithType:(ShareType)shareType withBlock:(SSGetUserInfoEventHandler)resultBlock;
+//+ (void)bindShareWithType:(ShareType)shareType withBlock:(SSGetUserInfoEventHandler)resultBlock;
 
 +(void)loiginWithCellPhone:(loginBlock)block :(NSString *)phoneNumber :(NSString*)passWord;
 

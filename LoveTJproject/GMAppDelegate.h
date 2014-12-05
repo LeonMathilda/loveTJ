@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ShareSDK/ShareSDK.h>
+//#import <ShareSDK/ShareSDK.h>
 #import "AppDatabase.h"
-#import "AGViewDelegate.h"
 #import "WXApi.h"
 #import "WBApi.h"
 @interface GMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, readonly, nonatomic) AGViewDelegate *shareViewDelegate;
+//@property (strong, readonly, nonatomic) AGViewDelegate *shareViewDelegate;
 
 @end

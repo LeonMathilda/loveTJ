@@ -86,7 +86,7 @@
 
 
 }
-
+/*
 
 + (void)loginWithBlock:(loginBlock)block
 {
@@ -147,6 +147,7 @@
         }
     }];
 }
+ */
 //-(void)setUsername:(NSString *)username
 //{
 //    _username = username;
@@ -161,7 +162,7 @@
     }
 //    [appDelegate setIsuserlogin:NO];
 //    [appDelegate updateAliasWithUserID:nil];
-    [ShareSDK cancelAuthWithType:ShareTypeSinaWeibo];
+//    [ShareSDK cancelAuthWithType:ShareTypeSinaWeibo];
 //    [uDefault setBool:NO forKey:OrderForbidShowSmallYellowPoint];
     [uDefault synchronize];
     [APIClient2 setUpToken:[YYCAccount token]];
@@ -176,15 +177,15 @@
     }];
 }
 
-+ (void)bindShareWithType:(ShareType)shareType withBlock:(SSGetUserInfoEventHandler)resultBlock
-{
-    [ShareSDK getUserInfoWithType:shareType authOptions:[ShareSDK authOptionsWithAutoAuth:YES allowCallback:NO scopes:nil powerByHidden:YES followAccounts:nil authViewStyle:SSAuthViewStyleModal viewDelegate:[appDelegate shareViewDelegate] authManagerViewDelegate:nil] result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-        if (resultBlock) {
-            resultBlock(result,userInfo,error);
-        }
-    }];
-
-}
+//+ (void)bindShareWithType:(ShareType)shareType withBlock:(SSGetUserInfoEventHandler)resultBlock
+//{
+//    [ShareSDK getUserInfoWithType:shareType authOptions:[ShareSDK authOptionsWithAutoAuth:YES allowCallback:NO scopes:nil powerByHidden:YES followAccounts:nil authViewStyle:SSAuthViewStyleModal viewDelegate:[appDelegate shareViewDelegate] authManagerViewDelegate:nil] result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+//        if (resultBlock) {
+//            resultBlock(result,userInfo,error);
+//        }
+//    }];
+//
+//}
 
 + (void)refreshUserInfo{
     YYCAccount *currentAccount = [YYCAccount currentAccount];

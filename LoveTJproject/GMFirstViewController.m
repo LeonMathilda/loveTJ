@@ -7,7 +7,6 @@
 //
 
 #import "GMFirstViewController.h"
-#import "HomeVC.h"
 #import "GMmainLoginViewViewController.h"
 @interface GMFirstViewController ()
 
@@ -19,9 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.view = [[HomeVC alloc] init].view;
-    GMmainLoginViewViewController *GMmainLoginVC = [[GMmainLoginViewViewController alloc] initWithNibName:@"GMmainLoginViewViewController" bundle:nil];
-    [self.navigationController pushViewController:GMmainLoginVC animated:YES];
+//    GMmainLoginViewViewController *GMmainLoginVC = [[GMmainLoginViewViewController alloc] initWithNibName:@"GMmainLoginViewViewController" bundle:nil];
+//    [self.navigationController pushViewController:GMmainLoginVC animated:YES];
 //    [self.navigationController presentViewController: animated:YES completion:^{
     
 //    }];

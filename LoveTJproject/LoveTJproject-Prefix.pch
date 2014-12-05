@@ -22,9 +22,9 @@
 #import"GGUtil.h"
 #import "UIAlertView+MKBlockAdditions.h"
 #import "GMAppDelegate.h"
-#import <ShareSDK/ShareSDK.h>
+//#import <ShareSDK/ShareSDK.h>
 #import "APIClient.h"
 #import "APIClient2.h"
 #import "MBProgressHUD.h"
-#import "AGViewDelegate.h"
+//#import "AGViewDelegate.h"
 #endif
