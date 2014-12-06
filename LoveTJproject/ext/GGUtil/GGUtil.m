@@ -12,7 +12,6 @@
 #import <objc/runtime.h>
 #import "NSString+Reverse.h"
 #import <MessageUI/MessageUI.h>
-#import <AGCommon/UIDevice+Common.h>
 
 @implementation GGUtil
 
@@ -395,24 +394,25 @@ static const char *getPropertyType(objc_property_t property) {
 
 + (BOOL)checkNetworkConnection
 {
-    struct sockaddr_in zeroAddress;
-    bzero(&zeroAddress, sizeof(zeroAddress));
-    zeroAddress.sin_len = sizeof(zeroAddress);
-    zeroAddress.sin_family = AF_INET;
-    
-    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
-    SCNetworkReachabilityFlags flags;
-    
-    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
-    CFRelease(defaultRouteReachability);
-    
-    if (!didRetrieveFlags) {
-        return NO;
-    }
-    
-    BOOL isReachable = flags & kSCNetworkFlagsReachable;
-    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
-    return (isReachable && !needsConnection) ? YES : NO;
+    return YES;
+//    struct sockaddr_in zeroAddress;
+//    bzero(&zeroAddress, sizeof(zeroAddress));
+//    zeroAddress.sin_len = sizeof(zeroAddress);
+//    zeroAddress.sin_family = AF_INET;
+//    
+//    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+//    SCNetworkReachabilityFlags flags;
+//    
+//    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+//    CFRelease(defaultRouteReachability);
+//    
+//    if (!didRetrieveFlags) {
+//        return NO;
+//    }
+//    
+//    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+//    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+//    return (isReachable && !needsConnection) ? YES : NO;
 }
 
 + (BOOL)isEnableAPNs

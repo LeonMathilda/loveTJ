@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 //#import <ShareSDK/ShareSDK.h>
 #import "AppDatabase.h"
-#import "WXApi.h"
-#import "WBApi.h"
 @interface GMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

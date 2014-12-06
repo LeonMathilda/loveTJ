@@ -11,20 +11,21 @@
 #endif
 
 #ifdef __OBJC__
+
+#define GMDefaultImageLoading @""
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #import "appConfig.h"
 #import "AFNetworking.h"
 #import "GGMacros.h"
 #import "UIViewController+Custom.h"
-#import"YYCAccount.h"
 #import "appAddress.h"
 #import"GGUtil.h"
 #import "UIAlertView+MKBlockAdditions.h"
 #import "GMAppDelegate.h"
+#import "UIImageView+MJWebCache.h"
 //#import <ShareSDK/ShareSDK.h>
-#import "APIClient.h"
-#import "APIClient2.h"
+
 #import "MBProgressHUD.h"
 //#import "AGViewDelegate.h"
 #endif

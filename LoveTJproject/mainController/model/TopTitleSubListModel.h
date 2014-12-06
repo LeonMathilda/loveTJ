@@ -7,7 +7,6 @@
 //
 
 #import "ITTBaseModelObject.h"
-
 @interface TopTitleSubListModel : ITTBaseModelObject
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain)NSString *titID;

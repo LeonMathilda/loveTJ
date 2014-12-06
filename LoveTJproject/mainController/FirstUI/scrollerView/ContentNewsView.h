@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TopTitleSubListModel.h"
+#import "ScrollImageView.h"
+#import "GMContentNewsScrollModel.h"
 @interface ContentNewsView : UIView<UITableViewDataSource,UITableViewDelegate>
 {
     TopTitleSubListModel *subModel;
     UITableView *mtableview;
     NSMutableArray *dataList;
+    ScrollImageView *headVIew;
 }
 -(void)restLoadData;
 -(void)restModel:(TopTitleSubListModel *)model;
