@@ -10,8 +10,10 @@
 #import "TopTitleScrollerView.h"
 #import "TopTitleModel.h"
 #import "TopTitleView.h"
-@interface HomePageViewController ()<UIScrollViewDelegate,TopTitleViewDelegate>
+#import "GMAddDifferentTitleController.h"
+@interface HomePageViewController ()<UIScrollViewDelegate,TopTitleViewDelegate,GMAddDifferentTitleControllerDelegate>
 {
+    TopTitleModel *titleModel;
     TopTitleView *titleView;
     ContentScrollView *contentScroll;
     BOOL mNeedUseDelegate;
@@ -22,16 +24,21 @@
 
 -(void)restSource
 {
-    TopTitleModel *topModel=[[TopTitleModel alloc]init];
-    for (int i=0; i<10; i++) {
-        TopTitleSubListModel *subModel=[[TopTitleSubListModel alloc]init];
-        subModel.titID=[NSString stringWithFormat:@"%i",i+1];
-        subModel.title=[NSString stringWithFormat:@"标题%d",i+1];
-        [topModel.list addObject:subModel];
-    }
-    [titleView restTopTitleView:topModel];
-    [contentScroll restContentView:topModel];
-    
+    [GMHttpRequest getDifferentTitle:1 usingSuccessBlock:^(BOOL isSuccess, TopTitleModel *result) {
+        if (isSuccess) {
+            titleModel=result;
+            [titleView restTopTitleView:result];
+            [contentScroll restContentView:result];
+        }
+    }];
+}
+-(void)restHeadLunBoData
+{
+    [GMHttpRequest getLunBoList:^(BOOL isSuccess, NSMutableArray *result) {
+        if (isSuccess) {
+            [contentScroll restHeadData:result];
+        }
+    }];
 }
 - (void)viewDidLoad {
     self.view.backgroundColor=[UIColor whiteColor];
@@ -41,7 +48,7 @@
     titleView.delegate=self;
     [self.view addSubview:titleView];
     
-    contentScroll=[[ContentScrollView alloc]initWithFrame:CGRectMake(0, titleView.frame.size.height+titleView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-titleView.frame.size.height-titleView.frame.origin.y)];
+    contentScroll=[[ContentScrollView alloc]initWithFrame:CGRectMake(0, titleView.frame.size.height+titleView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-titleView.frame.size.height-titleView.frame.origin.y-self.navigationController.toolbar.frame.size.height)];
     contentScroll.pagingEnabled = YES;
     contentScroll.showsHorizontalScrollIndicator=NO;
     contentScroll.showsVerticalScrollIndicator=NO;
@@ -49,6 +56,7 @@
     [self.view addSubview:contentScroll];
     
     [self restSource];
+    [self restHeadLunBoData];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -66,10 +74,24 @@
 }
 -(void)TopTitleViewDelegateClickIndex:(NSInteger)index
 {
-
     mNeedUseDelegate=NO;
     [contentScroll setContentOffset:CGPointMake(index*contentScroll.frame.size.width, 0) animated:YES];
-
+}
+-(void)TopTitleViewDelegateClickAdd
+{
+    GMAddDifferentTitleController *addTitleController=[[GMAddDifferentTitleController alloc]init];
+    addTitleController.modelList=[titleModel.list mutableCopy];
+    addTitleController.delegate=self;
+    [self.navigationController pushViewController:addTitleController animated:YES];
+}
+-(void)GMAddDifferentTitleControllerDelegateBack:(NSMutableArray *)list
+{
+    if (list.count) {
+        [titleModel.list removeAllObjects];
+        [titleModel.list addObjectsFromArray:list];
+        [titleView  titleResourceChange:titleModel];
+        [contentScroll ResourceChange:titleModel];
+    }
 }
 -(void)viewWillAppear:(BOOL)animated
 {

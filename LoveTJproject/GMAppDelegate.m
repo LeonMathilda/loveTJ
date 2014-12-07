@@ -38,6 +38,7 @@
     
     UITabBarController *tabbar=[[UITabBarController alloc]init];
     tabbar.viewControllers=[NSArray arrayWithObjects:homeController,FirstController,SecondController,FourthController, nil];
+    tabbar.tabBar.translucent=NO;
     self.window.rootViewController=tabbar;
     [self.window makeKeyAndVisible];
     return YES;

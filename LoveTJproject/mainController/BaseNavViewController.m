@@ -18,7 +18,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(NSArray *)popToRootViewControllerAnimated:(BOOL)animated
+{
+    [[self.viewControllers lastObject] setHidesBottomBarWhenPushed:NO];
+     return  [super popToRootViewControllerAnimated:animated];
+}
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+{
+    
 
+    if (self.viewControllers.count==2) {
+        [[self.viewControllers  objectAtIndex:0] setHidesBottomBarWhenPushed:NO];
+        [[self.viewControllers lastObject] setHidesBottomBarWhenPushed:NO];
+    }
+    return  [super popViewControllerAnimated:animated];
+}
+-(NSArray*)popToViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([self.viewControllers indexOfObject:viewController]==0) {
+        [[self.viewControllers lastObject] setHidesBottomBarWhenPushed:NO];
+    }
+    return  [super popToViewController:viewController animated:animated];
+}
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+
+    if (self.viewControllers.count) {
+        [viewController setHidesBottomBarWhenPushed:YES];
+    }
+    [super pushViewController:viewController animated:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

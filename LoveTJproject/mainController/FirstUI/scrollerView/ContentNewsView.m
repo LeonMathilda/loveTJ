@@ -14,6 +14,7 @@
 {
     if (self=[super init]) {
         dataList=[[NSMutableArray alloc]init];
+        headList=[[NSMutableArray alloc]initWithCapacity:0];
         mtableview=[[UITableView alloc]init];
         mtableview.separatorColor=[UIColor clearColor];
         mtableview.backgroundColor=[UIColor clearColor];
@@ -32,40 +33,30 @@
 -(void)loadServerData
 {
     [dataList removeAllObjects];
-    for (int i=0; i<10; i++) {
-        GMContentNewsModel *model=[[GMContentNewsModel alloc]init];
-        model.newsTitle=@"测试数据标题";
-        model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
-        model.newsReplyCount=@"303.3万";
-        model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
-        if (i%5==0) {
-            model.newsImages=[NSMutableArray arrayWithObjects:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg", nil];
-            model.newsImageCount=@"8";
+    [GMHttpRequest getTitleDetailList:subModel.titID.integerValue usingSuccessBlock:^(BOOL isSuccess, NSMutableArray *result) {
+        if (isSuccess) {
+            [dataList addObjectsFromArray:result];
+            [mtableview reloadData];
         }
-        if (i%3==0) {
-            model.newsClass=@"独家";
-        }
-        [dataList addObject:model];
-    }
-    [mtableview reloadData];
+    }];
 }
--(void)restHeadData
+-(void)restHeadData:(NSMutableArray *)list
 {
     [self createHeadView];
-    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
-    for (int i=0;i<4;i++) {
-        GMContentNewsScrollModel *scrollModel=[[GMContentNewsScrollModel alloc]init];
-        scrollModel.newsTitle=@"测试测试";
-        scrollModel.newsImagePath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
-        [list addObject:scrollModel];
-    }
+    [headList removeAllObjects];
+    
     if (list.count) {
         [headVIew SetImageList:list];
         mtableview.tableHeaderView=headVIew;
+        [headList addObjectsFromArray:list];
     }else
     {
         mtableview.tableHeaderView=nil;
     }
+}
+-(TopTitleSubListModel *)SubModel
+{
+    return subModel;
 }
 -(void)restLoadData
 {
@@ -75,7 +66,6 @@
 {
     subModel=model;
     [self loadServerData];
-    [self restHeadData];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

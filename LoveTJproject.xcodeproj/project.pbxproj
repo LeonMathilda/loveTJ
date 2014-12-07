@@ -208,6 +208,10 @@
 		18AEBE7C19D3D370007DA3A9 /* GMmainLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AEBE7A19D3D370007DA3A9 /* GMmainLoginViewViewController.xib */; };
 		18AEBE8019D3DDCD007DA3A9 /* GMPhoneRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE7E19D3DDCD007DA3A9 /* GMPhoneRegistViewController.m */; };
 		18AEBE8119D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AEBE7F19D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib */; };
+		265B5C981A34037600D7CD77 /* GMHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 265B5C971A34037600D7CD77 /* GMHttpRequest.m */; };
+		265B5C9B1A3408D600D7CD77 /* GMAddDifferentTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265B5C9A1A3408D600D7CD77 /* GMAddDifferentTitleController.m */; };
+		265B5C9D1A340AB100D7CD77 /* fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */; };
+		265B5CA01A340B8600D7CD77 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 265B5C9F1A340B8600D7CD77 /* TouchView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2691786F1A31E646004FF783 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2691786E1A31E646004FF783 /* Launch Screen.xib */; };
 		269178CE1A320EEE004FF783 /* ITTBaseModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178C91A320EEE004FF783 /* ITTBaseModelObject.m */; };
 		269178CF1A320EEE004FF783 /* TopTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178CB1A320EEE004FF783 /* TopTitleModel.m */; };
@@ -227,7 +231,6 @@
 		26D13EE01A335BE80030ED92 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EB61A335BE80030ED92 /* AFPropertyListRequestOperation.m */; };
 		26D13EE11A335BE80030ED92 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EB81A335BE80030ED92 /* AFURLConnectionOperation.m */; };
 		26D13EE21A335BE80030ED92 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EBA1A335BE80030ED92 /* AFXMLRequestOperation.m */; };
-		26D13EE31A335BE80030ED92 /* BCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EBC1A335BE80030ED92 /* BCRequest.m */; };
 		26D13EE41A335BE80030ED92 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D13ED51A335BE80030ED92 /* libzbar.a */; };
 		26D13EE51A335BE80030ED92 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D13ED71A335BE80030ED92 /* zbar-back.png */; };
 		26D13EE61A335BE80030ED92 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 26D13ED81A335BE80030ED92 /* zbar-help.html */; };
@@ -594,6 +597,13 @@
 		18AEBE7D19D3DDCD007DA3A9 /* GMPhoneRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhoneRegistViewController.h; sourceTree = "<group>"; };
 		18AEBE7E19D3DDCD007DA3A9 /* GMPhoneRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhoneRegistViewController.m; sourceTree = "<group>"; };
 		18AEBE7F19D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMPhoneRegistViewController.xib; sourceTree = "<group>"; };
+		265B5C961A34037600D7CD77 /* GMHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHttpRequest.h; sourceTree = "<group>"; };
+		265B5C971A34037600D7CD77 /* GMHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHttpRequest.m; sourceTree = "<group>"; };
+		265B5C991A3408D600D7CD77 /* GMAddDifferentTitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMAddDifferentTitleController.h; sourceTree = "<group>"; };
+		265B5C9A1A3408D600D7CD77 /* GMAddDifferentTitleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMAddDifferentTitleController.m; sourceTree = "<group>"; };
+		265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@2x.png"; sourceTree = "<group>"; };
+		265B5C9E1A340B8600D7CD77 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		265B5C9F1A340B8600D7CD77 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 		2691786E1A31E646004FF783 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		269178C81A320EEE004FF783 /* ITTBaseModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTBaseModelObject.h; sourceTree = "<group>"; };
 		269178C91A320EEE004FF783 /* ITTBaseModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTBaseModelObject.m; sourceTree = "<group>"; };
@@ -632,8 +642,6 @@
 		26D13EB81A335BE80030ED92 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
 		26D13EB91A335BE80030ED92 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
 		26D13EBA1A335BE80030ED92 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
-		26D13EBB1A335BE80030ED92 /* BCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRequest.h; sourceTree = "<group>"; };
-		26D13EBC1A335BE80030ED92 /* BCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRequest.m; sourceTree = "<group>"; };
 		26D13EC11A335BE80030ED92 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		26D13EC21A335BE80030ED92 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		26D13EC31A335BE80030ED92 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -1345,6 +1353,7 @@
 		1836227819DE6FC800BC0C65 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */,
 				1836227919DE6FC800BC0C65 /* all-bar-blue.png */,
 				1836227A19DE6FC800BC0C65 /* all-bar-blue@2x.png */,
 				1836227B19DE6FC800BC0C65 /* all-bar-on.png */,
@@ -1391,6 +1400,8 @@
 		183622B619DE702A00BC0C65 /* mainController */ = {
 			isa = PBXGroup;
 			children = (
+				265B5C961A34037600D7CD77 /* GMHttpRequest.h */,
+				265B5C971A34037600D7CD77 /* GMHttpRequest.m */,
 				269178E41A320F53004FF783 /* BaseNavViewController.h */,
 				269178E51A320F53004FF783 /* BaseNavViewController.m */,
 				269178DE1A320F07004FF783 /* BaceViewController.h */,
@@ -1413,6 +1424,8 @@
 				269178D11A320EFA004FF783 /* scrollerView */,
 				269178E11A320F11004FF783 /* HomePageViewController.h */,
 				269178E21A320F11004FF783 /* HomePageViewController.m */,
+				265B5C991A3408D600D7CD77 /* GMAddDifferentTitleController.h */,
+				265B5C9A1A3408D600D7CD77 /* GMAddDifferentTitleController.m */,
 			);
 			path = FirstUI;
 			sourceTree = "<group>";
@@ -1460,6 +1473,8 @@
 		269178D11A320EFA004FF783 /* scrollerView */ = {
 			isa = PBXGroup;
 			children = (
+				265B5C9E1A340B8600D7CD77 /* TouchView.h */,
+				265B5C9F1A340B8600D7CD77 /* TouchView.m */,
 				26D13EF81A336ADC0030ED92 /* click_down.png */,
 				26D13EF91A336ADC0030ED92 /* click_n.png */,
 				26D13EFA1A336ADC0030ED92 /* MyPageControl.h */,
@@ -1506,8 +1521,6 @@
 				26D13EB81A335BE80030ED92 /* AFURLConnectionOperation.m */,
 				26D13EB91A335BE80030ED92 /* AFXMLRequestOperation.h */,
 				26D13EBA1A335BE80030ED92 /* AFXMLRequestOperation.m */,
-				26D13EBB1A335BE80030ED92 /* BCRequest.h */,
-				26D13EBC1A335BE80030ED92 /* BCRequest.m */,
 				26D13EBD1A335BE80030ED92 /* ZBarSDK */,
 			);
 			path = AFNetworking;
@@ -1705,6 +1718,7 @@
 				183622AE19DE6FC800BC0C65 /* zhuce-sousuo@2x.png in Resources */,
 				183622A319DE6FC800BC0C65 /* all-news-blue.png in Resources */,
 				1818B3BA19BEE6060075C2EA /* Main.storyboard in Resources */,
+				265B5C9D1A340AB100D7CD77 /* fanhui@2x.png in Resources */,
 				1804F0471A1EDDBF00214B3E /* MJRefresh.bundle in Resources */,
 				26D13EE61A335BE80030ED92 /* zbar-help.html in Resources */,
 				1836229719DE6FC800BC0C65 /* all-bar-blue.png in Resources */,
@@ -1758,11 +1772,11 @@
 				1804F0AC1A1EDDC000214B3E /* NSObject+MKBlockAdditions.m in Sources */,
 				1804F0361A1EDDBF00214B3E /* NSArray+MTLManipulationAdditions.m in Sources */,
 				1804F0271A1EDDBF00214B3E /* mask.c in Sources */,
+				265B5C9B1A3408D600D7CD77 /* GMAddDifferentTitleController.m in Sources */,
 				1804F0281A1EDDBF00214B3E /* QRCodeGenerator.m in Sources */,
 				1804F0421A1EDDBF00214B3E /* MJPhotoBrowser.m in Sources */,
 				1804F0261A1EDDBF00214B3E /* bitstream.c in Sources */,
 				1804F0191A1EDDBF00214B3E /* GCPlaceholderTextView.m in Sources */,
-				26D13EE31A335BE80030ED92 /* BCRequest.m in Sources */,
 				1804F0161A1EDDBF00214B3E /* CostumTextField.m in Sources */,
 				1804F0AD1A1EDDC000214B3E /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				1804F04E1A1EDDBF00214B3E /* UIView+Extension.m in Sources */,
@@ -1770,6 +1784,7 @@
 				26D13F041A336B370030ED92 /* GMContentNewsScrollModel.m in Sources */,
 				1804F0511A1EDDBF00214B3E /* NSDate-Utilities.m in Sources */,
 				269178DB1A320EFA004FF783 /* ContentScrollView.m in Sources */,
+				265B5CA01A340B8600D7CD77 /* TouchView.m in Sources */,
 				26D13F011A336ADC0030ED92 /* ScrollImageView.m in Sources */,
 				1804F0B61A1EDDC000214B3E /* UILabel+StringFrame.m in Sources */,
 				269178CE1A320EEE004FF783 /* ITTBaseModelObject.m in Sources */,
@@ -1803,6 +1818,7 @@
 				269178E01A320F07004FF783 /* BaceViewController.m in Sources */,
 				1804F01A1A1EDDBF00214B3E /* GGUtil.m in Sources */,
 				1804F0241A1EDDBF00214B3E /* KZPropertyMapper.m in Sources */,
+				265B5C981A34037600D7CD77 /* GMHttpRequest.m in Sources */,
 				1804F0431A1EDDBF00214B3E /* MJPhotoLoadingView.m in Sources */,
 				1804F05F1A1EDDBF00214B3E /* SDWebImageCompat.m in Sources */,
 				1804F0641A1EDDBF00214B3E /* SDWebImageManager.m in Sources */,

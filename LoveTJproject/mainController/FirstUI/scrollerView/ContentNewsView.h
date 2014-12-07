@@ -16,7 +16,10 @@
     UITableView *mtableview;
     NSMutableArray *dataList;
     ScrollImageView *headVIew;
+    NSMutableArray *headList;
 }
+-(TopTitleSubListModel *)SubModel;
 -(void)restLoadData;
 -(void)restModel:(TopTitleSubListModel *)model;
+-(void)restHeadData:(NSMutableArray *)list;
 @end

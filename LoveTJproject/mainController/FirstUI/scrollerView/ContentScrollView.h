@@ -14,4 +14,6 @@
 }
 -(void)restContentView:(TopTitleModel *)model;
 -(void)reloadContentViewIndex:(NSInteger )index;
+-(void)restHeadData:(NSMutableArray *)listData;
+-(void)ResourceChange:(TopTitleModel *)model;//数据源改变
 @end

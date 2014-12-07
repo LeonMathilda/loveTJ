@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaceViewController : UIViewController
-
+-(void)showBackButton;
+-(void)BaseClickBackButton:(id)sender;
 @end

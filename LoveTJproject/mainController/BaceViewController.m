@@ -26,7 +26,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+-(void)showBackButton
+{
+    UIButton *navigationLeftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    navigationLeftBtn.frame = CGRectMake(0, 0, 122/2, 88/2);
+    [navigationLeftBtn setBackgroundImage:[UIImage imageNamed:@"fanhui@2x"] forState:UIControlStateNormal];
+    [navigationLeftBtn addTarget:self action:@selector(BaseClickBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *bar=[[UIBarButtonItem alloc] initWithCustomView:navigationLeftBtn];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    if (IOS7_OR_LATER) {
+        negativeSpacer.width=-15;
+    }else
+    {
+        negativeSpacer.width=-5;
+    }
+    
+    self.navigationItem.leftBarButtonItems=[NSArray arrayWithObjects:negativeSpacer,bar, nil];
+}
+-(void)BaseClickBackButton:(id)sender
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

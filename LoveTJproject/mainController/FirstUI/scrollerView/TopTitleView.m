@@ -29,7 +29,9 @@
 }
 -(void)clickAdd
 {
-    
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(TopTitleViewDelegateClickAdd)]) {
+        [self.delegate TopTitleViewDelegateClickAdd];
+    }
 }
 -(void)setFrame:(CGRect)frame
 {
@@ -45,6 +47,10 @@
 -(void)restTitleScrollSelect:(NSInteger )select
 {
     [scrollerView restTitleScrollSelect:select];
+}
+-(void)titleResourceChange:(TopTitleModel *)model
+{
+    [scrollerView titleResourceChange:model];
 }
 -(void)TopTitleScrollerViewDelegate:(NSInteger)index
 {

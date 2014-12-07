@@ -14,11 +14,12 @@
 @end
 @interface TopTitleScrollerView : UIScrollView<UIScrollViewDelegate>
 {
-   TopTitleSubListModel* currentSelectedModel;
+   NSString* currentSelectedStr;
     NSMutableArray *btnList;
     UIView *bgView;
 }
 @property(nonatomic,assign)id<TopTitleScrollerViewDelegate>delegateSelect;
 -(void)restTitleScrollSelect:(NSInteger )select;
 -(void)restSource:(TopTitleModel *)titleModel;
+-(void)titleResourceChange:(TopTitleModel *)model;
 @end

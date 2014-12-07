@@ -7,7 +7,7 @@
 //
 
 #import "TopTitleScrollerView.h"
-
+#import <objc/runtime.h>
 @implementation TopTitleScrollerView
 -(id)init
 {
@@ -33,27 +33,64 @@
             [view removeFromSuperview];
         }
     }
+    for (TopTitleSubListModel *model in titleModel.list) {
+        [btnList addObject:[self createBtn:model]];
+    }
+    [self newBtnView];
+}
+-(UIButton *)createBtn:(TopTitleSubListModel *)model
+{
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame=CGRectMake(0, 0, 60, self.frame.size.height);
+    [btn setTitle:model.title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.titleLabel.font=[UIFont systemFontOfSize:15];
+    [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    return btn;
+}
+-(void)newBtnView
+{
     self.contentSize=CGSizeMake(self.frame.size.width+1, self.frame.size.height);
     float x=0;
-    NSInteger index=0;
-    for (TopTitleSubListModel *model in titleModel.list) {
-        UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+     NSInteger index=0;
+    for (UIButton *btn in btnList) {
+        if (![btn isDescendantOfView:self]) {
+            [self addSubview:btn];
+        }
         btn.frame=CGRectMake(x, 0, 60, self.frame.size.height);
-        [btn setTitle:model.title forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        btn.titleLabel.font=[UIFont systemFontOfSize:15];
-        [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:btn];
         x=btn.frame.size.width+btn.frame.origin.x;
-        [btnList addObject:btn];
-        if ([model.titID isEqualToString:currentSelectedModel.titID]) {
-            index=[titleModel.list indexOfObject:model];
+        if ([btn.titleLabel.text isEqualToString:currentSelectedStr]) {
+            index=[btnList indexOfObject:btn];
         }
     }
     if (btnList.count) {
         [self clickBtn:[btnList objectAtIndex:index]];
     }
     self.contentSize=CGSizeMake(MAX(x, self.frame.size.width+1), self.frame.size.height);
+}
+-(void)titleResourceChange:(TopTitleModel *)model
+{
+    for (UIButton *btn in btnList) {
+        [btn removeFromSuperview];
+    }
+    NSMutableArray *newBtnList=[NSMutableArray arrayWithCapacity:0];
+    for (TopTitleSubListModel *subModel  in model.list) {
+        BOOL has=NO;
+        for (UIButton *btn in btnList) {
+            if ([btn.titleLabel.text isEqualToString:subModel.title]) {
+                [newBtnList addObject:btn];
+                has=YES;
+                break;
+            }
+        }
+        if (!has) {
+            [newBtnList addObject:[self createBtn:subModel]];
+        }
+    }
+    [btnList removeAllObjects];
+    [btnList addObjectsFromArray:newBtnList];
+    [self newBtnView];
+    
 }
 -(void)btnDefaultColor:(UIColor*)color
 {
@@ -88,11 +125,10 @@
     if (sendDelegaet&&self.delegateSelect&&[self.delegateSelect respondsToSelector:@selector(TopTitleScrollerViewDelegate:)]) {
         [self.delegateSelect TopTitleScrollerViewDelegate:[btnList indexOfObject:btn]];
     }
-
 }
 -(void)clickBtn:(UIButton *)btn
 {
-
+    currentSelectedStr=btn.titleLabel.text;
     [self shouldMove:btn delegate:YES];
 }
 -(void)restTitleScrollSelect:(NSInteger )select

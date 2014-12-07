@@ -12,7 +12,7 @@
 
 #ifdef __OBJC__
 
-#define GMDefaultImageLoading @""
+
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #import "appConfig.h"
@@ -27,5 +27,6 @@
 //#import <ShareSDK/ShareSDK.h>
 
 #import "MBProgressHUD.h"
+#import "GMHttpRequest.h"
 //#import "AGViewDelegate.h"
 #endif

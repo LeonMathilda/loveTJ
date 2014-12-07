@@ -40,4 +40,8 @@
 #define kNotificationShouldLogout @"NotificationShouldLogout"
 #define kNotificationDidnotPay @"NotificationDidnotPay"
 #define kNotificationOrderPayed @"NotificationOrderPayed"
+
+#define GMDefaultImageLoading @""//默认加载图片
+#define IOS7_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS8_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
 #endif

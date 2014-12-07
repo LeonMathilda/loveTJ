@@ -12,9 +12,22 @@
 -(id)init
 {
     if (self=[super init]) {
-        list=[[NSMutableArray alloc]init];
+        [self initData];
     }
     return self;
+}
+-(id)initWithFrame:(CGRect)frame
+{
+    if (self=[super initWithFrame:frame]) {
+        [self initData];
+    }
+    return self;
+}
+-(void)initData
+{
+    if (!list) {
+        list=[[NSMutableArray alloc]init];
+    }
 }
 -(void)restContentView:(TopTitleModel *)model
 {
@@ -22,18 +35,30 @@
     for(UIView *view in self.subviews) {
         [view removeFromSuperview];
     }
+    for (TopTitleSubListModel *Submodel in  model.list) {
+        [list addObject:[self createContentNewsView:Submodel]];
+    }
+    [self restContentViewFrame];
+}
+-(void)restContentViewFrame
+{
     self.contentSize=CGSizeMake(self.frame.size.width+1, self.frame.size.height);
     float x=0;
-    for (TopTitleSubListModel *Submodel in  model.list) {
-        ContentNewsView *contentView=[[ContentNewsView alloc]init];
-        contentView.frame=CGRectMake(x,0 , self.frame.size.width, self.frame.size.height);
-        [contentView restModel:Submodel];
-        [self addSubview:contentView];
-        x=contentView.frame.size.width+contentView.frame.origin.x;
-        [list addObject:contentView];
+    for (ContentNewsView *view in list) {
+        if (![view isDescendantOfView:self]) {
+            [self addSubview:view];
+        }
+        view.frame=CGRectMake(x,0 , self.frame.size.width, self.frame.size.height);
+        x=view.frame.size.width+view.frame.origin.x;
     }
-    self.contentSize=CGSizeMake(MAX(x, self.frame.size.width+1), self.frame.size.height);
-
+     self.contentSize=CGSizeMake(MAX(x, self.frame.size.width+1), self.frame.size.height);
+}
+-(ContentNewsView *)createContentNewsView:(TopTitleSubListModel *)model
+{
+    ContentNewsView *contentView=[[ContentNewsView alloc]init];
+    contentView.frame=CGRectMake(0,0 , self.frame.size.width, self.frame.size.height);
+    [contentView restModel:model];
+    return contentView;
 }
 -(void)reloadContentViewIndex:(NSInteger )index
 {
@@ -41,6 +66,36 @@
         ContentNewsView *contentView=[list objectAtIndex:index];
         [contentView restLoadData];
     }
+}
+-(void)restHeadData:(NSMutableArray *)listData
+{
+    for (ContentNewsView *view in list) {
+        [view  restHeadData:listData];
+    }
+}
+-(void)ResourceChange:(TopTitleModel *)model
+{
+    for (ContentNewsView *view in list) {
+        [view removeFromSuperview];
+    }
+    NSMutableArray *newBtnList=[NSMutableArray arrayWithCapacity:0];
+    for (TopTitleSubListModel *subModel  in model.list) {
+        BOOL has=NO;
+        for (ContentNewsView *view in list) {
+            
+            if ([[view SubModel].title  isEqualToString:subModel.title]) {
+                [newBtnList addObject:view];
+                has=YES;
+                break;
+            }
+        }
+        if (!has) {
+            [newBtnList addObject:[self createContentNewsView:subModel]];
+        }
+    }
+    [list removeAllObjects];
+    [list addObjectsFromArray:newBtnList];
+    [self restContentViewFrame];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

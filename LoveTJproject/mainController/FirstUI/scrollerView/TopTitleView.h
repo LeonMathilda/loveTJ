@@ -11,6 +11,7 @@
 #import "TopTitleScrollerView.h"
 @protocol TopTitleViewDelegate<NSObject>
 -(void)TopTitleViewDelegateClickIndex:(NSInteger)index;
+-(void)TopTitleViewDelegateClickAdd;
 @end
 @interface TopTitleView : UIView<TopTitleScrollerViewDelegate>
 {
@@ -21,4 +22,6 @@
 @property(nonatomic,assign)id<TopTitleViewDelegate>delegate;
 -(void)restTopTitleView:(TopTitleModel *)model;
 -(void)restTitleScrollSelect:(NSInteger )select;
+
+-(void)titleResourceChange:(TopTitleModel *)model;
 @end
