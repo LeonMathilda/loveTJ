@@ -25,8 +25,6 @@
 }
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    
-
     if (self.viewControllers.count==2) {
         [[self.viewControllers  objectAtIndex:0] setHidesBottomBarWhenPushed:NO];
         [[self.viewControllers lastObject] setHidesBottomBarWhenPushed:NO];

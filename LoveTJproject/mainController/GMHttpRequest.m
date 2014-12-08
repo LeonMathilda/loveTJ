@@ -96,6 +96,7 @@
     for (int i=0; i<10; i++) {
         GMContentNewsModel *model=[[GMContentNewsModel alloc]init];
         model.newsTitle=@"测试数据标题";
+        model.newsID=[NSString stringWithFormat:@"%d",i+1];
         model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
         model.newsReplyCount=@"303.3万";
         model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
@@ -121,5 +122,33 @@
         [list addObject:scrollModel];
     }
     successBlock(YES,list);
+}
++(void)newsDetail:(NSInteger)newsID usingSuccessBlock:(void (^)(BOOL isSuccess,GMNewsDetailModel  *result))successBlock
+{
+    GMNewsDetailModel *detailModel=[[GMNewsDetailModel alloc]init];
+    detailModel.newsContent=@"12月6日上午，4个外地人以打工无果、没钱买票回家为由，在重庆沙坪坝三峡广场寻求资助时，被热心市民举报。民警将4人带回派出所调查，让人诧异的是，这几个声称没钱回家的外地打工者，竟然是从南昌搭乘飞机前去重庆行乞赚过年钱的，其中一人用的手机还是iPhone 6 Plus  12月6日上午11点左右，重庆热心市民熊大姐报警称，有外地人在三峡广场冒充没钱回家的打工者，四处行骗要钱。民警迅速赶往现场，将4人带回沙坪坝区公安分局渝碚路派出所进行调查.\r\n经查，4人均来自安徽某县，平时在家务农，农闲时节便相邀出门行乞，主要方式就是冒充外来务工人员，钱不够买票回家，寻求资助。由于每次要钱的数额很小，一般是三五元，最多十来元，很多好心人不慎上当受骗。\r\n据交代，4人11月28日从南昌乘飞机到重庆，1个星期多时间先后到过沙坪坝、解放碑、南坪、大渡口等地的人流密集区域，除去开销，每人已经赚了七八百元。\r\n\r\n民警对4人的随身物品进行了清点，发现他们不仅衣着光鲜，手表、戒指一应俱全，还有3人使用的是苹果手机，其中一人用的还是最新上市的iPhone 6 Plus。\r\n\r\n\r\n民警对4人进行了严厉的批评教育。4人认识到错误，写下检讨书，表示将尽快返回家乡，不再行乞骗人。据《重庆晚报》";
+    detailModel.newsTitle=@"重大新闻,敬请留意";
+    detailModel.newsTime=@"2014/09/20";
+    detailModel.newsSourse=@"中国青年网";
+    detailModel.newsReplyCount=@"2222";
+    detailModel.newsType=GMNewsDetailType_common;
+    if (newsID%2==0) {
+        detailModel.newsType=GMNewsDetailType_video;
+        detailModel.newsVideoImage=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        detailModel.newsVidelUrl=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+    }
+    detailModel.newsTopImage=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+    NSMutableArray *aboutNewsList=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0; i<4; i++) {
+        GMContentNewsModel *aboutModel=[[GMContentNewsModel alloc]init];
+        aboutModel.newsSourece=@"中国青年网";
+        aboutModel.newsTitle=@"相关新闻标题";
+        aboutModel.newsTime=@"2014-12-8";
+        aboutModel.newsID=@"3";
+        [aboutNewsList addObject:aboutModel];
+    }
+    detailModel.newsRelated=aboutNewsList;
+    successBlock(YES,detailModel);
+    
 }
 @end

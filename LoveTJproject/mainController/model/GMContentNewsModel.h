@@ -17,4 +17,6 @@
 @property(nonatomic,retain)NSMutableArray *newsImages;
 @property(nonatomic,retain)NSString *newsImageCount;
 @property(nonatomic,retain)NSString *newsReplyCount;
+@property(nonatomic,retain)NSString *newsSourece;
+@property(nonatomic,retain)NSString *newsTime;
 @end

@@ -10,6 +10,10 @@
 #import "TopTitleSubListModel.h"
 #import "ScrollImageView.h"
 #import "GMContentNewsScrollModel.h"
+@protocol ContentNewsViewDelegate<NSObject>
+@optional
+-(void)ContentNewsViewDelegateSelectNews:(GMContentNewsModel *)subModel;
+@end
 @interface ContentNewsView : UIView<UITableViewDataSource,UITableViewDelegate>
 {
     TopTitleSubListModel *subModel;
@@ -18,6 +22,7 @@
     ScrollImageView *headVIew;
     NSMutableArray *headList;
 }
+@property(nonatomic,assign)id<ContentNewsViewDelegate>delegate;
 -(TopTitleSubListModel *)SubModel;
 -(void)restLoadData;
 -(void)restModel:(TopTitleSubListModel *)model;

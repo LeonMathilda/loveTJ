@@ -91,6 +91,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(ContentNewsViewDelegateSelectNews:)]) {
+        [self.delegate ContentNewsViewDelegateSelectNews:[dataList objectAtIndex:indexPath.row]];
+    }
 }
 -(void)setFrame:(CGRect)frame
 {

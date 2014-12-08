@@ -11,7 +11,8 @@
 #import "TopTitleModel.h"
 #import "TopTitleView.h"
 #import "GMAddDifferentTitleController.h"
-@interface HomePageViewController ()<UIScrollViewDelegate,TopTitleViewDelegate,GMAddDifferentTitleControllerDelegate>
+#import "GMNewsDetailViewController.h"
+@interface HomePageViewController ()<UIScrollViewDelegate,TopTitleViewDelegate,GMAddDifferentTitleControllerDelegate,ContentScrollViewDelegate>
 {
     TopTitleModel *titleModel;
     TopTitleView *titleView;
@@ -50,6 +51,7 @@
     
     contentScroll=[[ContentScrollView alloc]initWithFrame:CGRectMake(0, titleView.frame.size.height+titleView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-titleView.frame.size.height-titleView.frame.origin.y-self.navigationController.toolbar.frame.size.height)];
     contentScroll.pagingEnabled = YES;
+    contentScroll.delegateNews=self;
     contentScroll.showsHorizontalScrollIndicator=NO;
     contentScroll.showsVerticalScrollIndicator=NO;
     contentScroll.delegate=self;
@@ -92,6 +94,13 @@
         [titleView  titleResourceChange:titleModel];
         [contentScroll ResourceChange:titleModel];
     }
+}
+-(void)ContentScrollViewDelegateSelect:(GMContentNewsModel *)subModel
+{
+    GMNewsDetailViewController *newsDetailController=[[GMNewsDetailViewController alloc]init];
+    newsDetailController.titleModel=subModel;
+    [self.navigationController pushViewController:newsDetailController animated:YES];
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {

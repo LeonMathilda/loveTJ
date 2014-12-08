@@ -26,6 +26,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(void)loadView
+{
+    [super loadView];
+}
 -(void)showBackButton
 {
     UIButton *navigationLeftBtn=[UIButton buttonWithType:UIButtonTypeCustom];

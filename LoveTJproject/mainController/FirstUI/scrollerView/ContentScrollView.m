@@ -8,6 +8,11 @@
 
 #import "ContentScrollView.h"
 #import "ContentNewsView.h"
+@interface ContentScrollView()<ContentNewsViewDelegate>
+{
+    
+}
+@end
 @implementation ContentScrollView
 -(id)init
 {
@@ -58,6 +63,7 @@
     ContentNewsView *contentView=[[ContentNewsView alloc]init];
     contentView.frame=CGRectMake(0,0 , self.frame.size.width, self.frame.size.height);
     [contentView restModel:model];
+    contentView.delegate=self;
     return contentView;
 }
 -(void)reloadContentViewIndex:(NSInteger )index
@@ -96,6 +102,12 @@
     [list removeAllObjects];
     [list addObjectsFromArray:newBtnList];
     [self restContentViewFrame];
+}
+-(void)ContentNewsViewDelegateSelectNews:(GMContentNewsModel *)subModel
+{
+    if (self.delegateNews&&[self.delegateNews respondsToSelector:@selector(ContentScrollViewDelegateSelect:)]) {
+        [self.delegateNews ContentScrollViewDelegateSelect:subModel];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

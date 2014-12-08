@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "TopTitleModel.h"
+@protocol ContentScrollViewDelegate<NSObject>
+@optional
+-(void)ContentScrollViewDelegateSelect:(GMContentNewsModel *)subModel;
+@end
 @interface ContentScrollView : UIScrollView
 {
     NSMutableArray *list;
 }
+@property(nonatomic,assign)id<ContentScrollViewDelegate>delegateNews;
 -(void)restContentView:(TopTitleModel *)model;
 -(void)reloadContentViewIndex:(NSInteger )index;
 -(void)restHeadData:(NSMutableArray *)listData;

@@ -28,5 +28,6 @@
 
 #import "MBProgressHUD.h"
 #import "GMHttpRequest.h"
+#import "CustomMethod.h"
 //#import "AGViewDelegate.h"
 #endif

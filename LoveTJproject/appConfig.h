@@ -30,6 +30,8 @@
 #define UMENG_APPKEY @"54009ab6fd98c50a1f01cd80"
 
 
+#define NAVBARHIGHT(_CONTROLLER)  (_CONTROLLER.navigationController.navigationBar.frame.size.height+_CONTROLLER.navigationController.navigationBar.frame.origin.y)
+
 #define kNotificationDidLogoutAccount @"NotificationDidLogoutAccount"
 #define kNotificationDidLoginAccount @"NotificationDidLoginAccount"
 #define kNotificationDidRefreshAccount @"NotificationDidRefreshAccount"

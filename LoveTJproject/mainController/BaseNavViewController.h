@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BaseNavViewController : UINavigationController
+#import "MLNavigationController.h"
+@interface BaseNavViewController : MLNavigationController
 
 @end
