@@ -10,7 +10,7 @@
 #import "GMNewsDetailModel.h"
 #import "GMNewsReplyView.h"
 #import "GMCommonAndVideoView.h"
-@interface GMNewsDetailViewController ()<GMCommonAndVideoViewDelegate>
+@interface GMNewsDetailViewController ()<GMCommonAndVideoViewDelegate,GMNewsReplyViewDelegate>
 {
     GMNewsDetailModel *detailModel;
     UIScrollView *scroller;
@@ -34,6 +34,7 @@
 {
     if (!replyView) {
         replyView=[[GMNewsReplyView alloc]init];
+        replyView.delegate=self;
     }
     if (!commonAndVideoView) {
         commonAndVideoView =[[GMCommonAndVideoView alloc]init];
@@ -53,6 +54,8 @@
     commonAndVideoView.frame=CGRectMake(0, 0, scroller.frame.size.width, scroller.frame.size.height);
     replyView.frame=CGRectMake(scroller.frame.size.width, 0, scroller.frame.size.width, scroller.frame.size.height);
     [commonAndVideoView restView:detailModel];
+    [replyView restHeadView:detailModel];
+    [replyView reloadData:detailModel.newsID];
     scroller.contentSize=CGSizeMake(scroller.frame.size.width*2, scroller.frame.size.height);
 }
 - (void)viewDidLoad {
@@ -88,6 +91,14 @@
         [CustomMethod showWaringMessage:NSLocalizedString(@"数据错误", nil)];
     }
     
+}
+-(void)GMNewsReplyViewDelegateClickAvatar:(GMContentNewsModel *)replyModel
+{
+    [CustomMethod showWaringMessage:NSLocalizedString(@"敬请期待", nil)];
+}
+-(void)GMNewsReplyViewDelegateClickLocation:(GMContentNewsModel *)replyModel
+{
+    [CustomMethod showWaringMessage:NSLocalizedString(@"敬请期待", nil)];
 }
 -(void)GMCommonAndVideoViewDelegateClickPlayVideo
 {

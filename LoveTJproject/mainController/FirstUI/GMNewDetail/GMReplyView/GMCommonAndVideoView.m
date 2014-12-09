@@ -8,9 +8,7 @@
 
 #import "GMCommonAndVideoView.h"
 #import "GMRelatedNews.h"
-#define GMCommonAndVideoView_leftPlace 10
-#define GMCommonAndVideoView_TopPlace 10
-#define GMCommonAndVideoView_MaxImageHight 250
+#import "GMNewsHeadView.h"
 @interface GMCommonAndVideoView()<GMRelatedNewsDelegate,ALMoviePlayerControllerDelegate>
 {
     CGRect defaultFrame;
@@ -42,33 +40,16 @@
 }
 -(void)restView:(GMNewsDetailModel *)model
 {
+    float contentWidth=self.frame.size.width-GMCommonAndVideoView_leftPlace*2;
     [CustomMethod removeSubview:self];
-    UILabel *title=[[UILabel alloc]init];
-    title.frame=CGRectMake(GMCommonAndVideoView_leftPlace, GMCommonAndVideoView_TopPlace, self.frame.size.width-GMCommonAndVideoView_leftPlace*2, 40);
-    title.backgroundColor=[UIColor clearColor];
-    title.font=[UIFont boldSystemFontOfSize:20];
-    title.textColor=[UIColor blackColor];
-    title.textAlignment=NSTextAlignmentLeft;
-    title.text=model.newsTitle;
-    [self addSubview:title];
-    
-    UILabel *sourceLabel=[[UILabel alloc]init];
-    sourceLabel.frame=CGRectMake(title.frame.origin.x, title.frame.size.height+title.frame.origin.y, title.frame.size.width, 20);
-    sourceLabel.backgroundColor=[UIColor clearColor];
-    sourceLabel.font=[UIFont systemFontOfSize:14];
-    sourceLabel.textColor=[UIColor lightGrayColor];
-    sourceLabel.text=[NSString stringWithFormat:@"%@%@%@",model.newsSourse?[NSString stringWithFormat:@"%@  ",model.newsSourse]:@"",model.newsTime?[NSString stringWithFormat:@"%@  ",model.newsTime]:@"",model.newsReplyCount?[NSString stringWithFormat:@"%@评论",model.newsReplyCount]:@""];
-    [self addSubview:sourceLabel];
-    
-    UIView *line=[[UIView alloc]init];
-    line.backgroundColor=[UIColor lightGrayColor];
-    line.alpha=0.5;
-    line.frame=CGRectMake(title.frame.origin.x, sourceLabel.frame.size.height+sourceLabel.frame.origin.y+10, title.frame.size.width, 0.5);
-    [self addSubview:line];
-    float y=line.frame.size.height+line.frame.origin.y+20;
+    GMNewsHeadView *newsHeadView=[[GMNewsHeadView alloc]init];
+    newsHeadView.frame=CGRectMake(0, 0, self.frame.size.width, 0);
+    [newsHeadView restHeadView:model];
+    [self addSubview:newsHeadView];
+    float y=newsHeadView.frame.size.height+newsHeadView.frame.origin.y+20;
     if (model.newsType==GMNewsDetailType_common&&model.newsTopImage) {
         UIImageView *topImage=[[UIImageView alloc]init];
-        topImage.frame=CGRectMake(GMCommonAndVideoView_leftPlace, y, title.frame.size.width, GMCommonAndVideoView_MaxImageHight);
+        topImage.frame=CGRectMake(GMCommonAndVideoView_leftPlace, y, contentWidth, GMCommonAndVideoView_MaxImageHight);
         topImage.contentMode=UIViewContentModeScaleAspectFill;
         topImage.clipsToBounds=YES;
         [topImage setImageURL:[NSURL URLWithString:model.newsTopImage] placeholder:[UIImage imageNamed:GMDefaultImageLoading]];
@@ -80,7 +61,7 @@
     if (model.newsType==GMNewsDetailType_video&&model.newsVidelUrl) {
         [self cancelPlay];
         topVideoImage=[[UIImageView alloc]init];
-        topVideoImage.frame=CGRectMake(GMCommonAndVideoView_leftPlace, y, title.frame.size.width, GMCommonAndVideoView_MaxImageHight);
+        topVideoImage.frame=CGRectMake(GMCommonAndVideoView_leftPlace, y, contentWidth, GMCommonAndVideoView_MaxImageHight);
         topVideoImage.contentMode=UIViewContentModeScaleAspectFill;
         topVideoImage.clipsToBounds=YES;
         [topVideoImage setImageURL:[NSURL URLWithString:model.newsVideoImage] placeholder:[UIImage imageNamed:GMDefaultImageLoading]];
@@ -97,7 +78,7 @@
         y=topVideoImage.frame.size.height+topVideoImage.frame.origin.y+20;
     }
     UILabel *content=[[UILabel alloc]init];
-    content.frame=CGRectMake(title.frame.origin.x, y, title.frame.size.width, 0);
+    content.frame=CGRectMake(GMCommonAndVideoView_leftPlace, y,contentWidth, 0);
     content.backgroundColor=[UIColor clearColor];
     content.font=[UIFont systemFontOfSize:15];
     content.textColor=[UIColor lightGrayColor];
@@ -105,9 +86,9 @@
     content.text=model.newsContent;
     [self addSubview:content];
     [content sizeToFit];
-    content.frame=CGRectMake(content.frame.origin.x, content.frame.origin.y, title.frame.size.width, content.frame.size.height);
+    content.frame=CGRectMake(content.frame.origin.x, content.frame.origin.y, contentWidth, content.frame.size.height);
     GMRelatedNews *relatedNews=[[GMRelatedNews alloc]init];
-    relatedNews.frame=CGRectMake(title.frame.origin.x, content.frame.size.height+content.frame.origin.y+20, title.frame.size.width, 0);
+    relatedNews.frame=CGRectMake(GMCommonAndVideoView_leftPlace, content.frame.size.height+content.frame.origin.y+20, contentWidth, 0);
     relatedNews.delegate=self;
     [relatedNews restRelatedNews:model.newsRelated];
     [self addSubview:relatedNews];
@@ -131,6 +112,8 @@
         [self.delegateClcik GMCommonAndVideoViewDelegateClickImage];
     }
 }
+
+//视频 本地数据
 - (void)localFile {
     [self.moviePlayer stop];
     [self.moviePlayer setContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"popeye" ofType:@"mp4"]]];

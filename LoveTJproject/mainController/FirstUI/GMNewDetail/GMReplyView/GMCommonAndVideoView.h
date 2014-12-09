@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GMNewsDetailModel.h"
 #import "ALMoviePlayerController.h"
+#define GMCommonAndVideoView_leftPlace 10
+#define GMCommonAndVideoView_TopPlace 10
+#define GMCommonAndVideoView_MaxImageHight 250
 @protocol GMCommonAndVideoViewDelegate<NSObject>
 -(void)GMCommonAndVideoViewDelegateClickImage;
 -(void)GMCommonAndVideoViewDelegateClickPlayVideo;

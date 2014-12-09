@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class GMContentNewsModel;
+@protocol GMNewsReplyViewDelegate<NSObject>
+@optional
+-(void)GMNewsReplyViewDelegateClickAvatar:(GMContentNewsModel *)replyModel;
+-(void)GMNewsReplyViewDelegateClickLocation:(GMContentNewsModel *)replyModel;
+@end
 @interface GMNewsReplyView : UIView
-{
-    UITableView *mTableView;
-}
+@property(nonatomic,assign)id<GMNewsReplyViewDelegate>delegate;
 -(void)reloadData:(NSString *)newsID;
+-(void)restHeadView:(GMNewsDetailModel *)model;
 @end

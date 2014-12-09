@@ -215,6 +215,10 @@
 		265B5C9B1A3408D600D7CD77 /* GMAddDifferentTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265B5C9A1A3408D600D7CD77 /* GMAddDifferentTitleController.m */; };
 		265B5C9D1A340AB100D7CD77 /* fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */; };
 		265B5CA01A340B8600D7CD77 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 265B5C9F1A340B8600D7CD77 /* TouchView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26706CE91A372FDA008C9766 /* GMNewsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26706CE81A372FDA008C9766 /* GMNewsHeadView.m */; };
+		26706CEC1A37326A008C9766 /* GMNewsReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26706CEB1A37326A008C9766 /* GMNewsReplyModel.m */; };
+		26706CEF1A3732DE008C9766 /* GMNewsReplySubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26706CEE1A3732DE008C9766 /* GMNewsReplySubModel.m */; };
+		26706CF21A3736E9008C9766 /* GMNewsReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26706CF11A3736E9008C9766 /* GMNewsReplyCell.m */; };
 		2679DD471A35CEA9000881C7 /* GMCommonAndVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2679DD461A35CEA9000881C7 /* GMCommonAndVideoView.m */; };
 		2679DD4A1A35CEC1000881C7 /* GMNewsReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2679DD491A35CEC1000881C7 /* GMNewsReplyView.m */; };
 		2679DD4E1A35DD4F000881C7 /* PGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2679DD4D1A35DD4F000881C7 /* PGToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -640,6 +644,14 @@
 		265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@2x.png"; sourceTree = "<group>"; };
 		265B5C9E1A340B8600D7CD77 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
 		265B5C9F1A340B8600D7CD77 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
+		26706CE71A372FDA008C9766 /* GMNewsHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNewsHeadView.h; sourceTree = "<group>"; };
+		26706CE81A372FDA008C9766 /* GMNewsHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNewsHeadView.m; sourceTree = "<group>"; };
+		26706CEA1A37326A008C9766 /* GMNewsReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNewsReplyModel.h; sourceTree = "<group>"; };
+		26706CEB1A37326A008C9766 /* GMNewsReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNewsReplyModel.m; sourceTree = "<group>"; };
+		26706CED1A3732DE008C9766 /* GMNewsReplySubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNewsReplySubModel.h; sourceTree = "<group>"; };
+		26706CEE1A3732DE008C9766 /* GMNewsReplySubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNewsReplySubModel.m; sourceTree = "<group>"; };
+		26706CF01A3736E9008C9766 /* GMNewsReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNewsReplyCell.h; sourceTree = "<group>"; };
+		26706CF11A3736E9008C9766 /* GMNewsReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMNewsReplyCell.m; sourceTree = "<group>"; };
 		2679DD451A35CEA9000881C7 /* GMCommonAndVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCommonAndVideoView.h; sourceTree = "<group>"; };
 		2679DD461A35CEA9000881C7 /* GMCommonAndVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMCommonAndVideoView.m; sourceTree = "<group>"; };
 		2679DD481A35CEC1000881C7 /* GMNewsReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMNewsReplyView.h; sourceTree = "<group>"; };
@@ -1569,6 +1581,10 @@
 				2679DD491A35CEC1000881C7 /* GMNewsReplyView.m */,
 				2679DD531A35DE65000881C7 /* GMRelatedNews.h */,
 				2679DD541A35DE65000881C7 /* GMRelatedNews.m */,
+				26706CE71A372FDA008C9766 /* GMNewsHeadView.h */,
+				26706CE81A372FDA008C9766 /* GMNewsHeadView.m */,
+				26706CF01A3736E9008C9766 /* GMNewsReplyCell.h */,
+				26706CF11A3736E9008C9766 /* GMNewsReplyCell.m */,
 			);
 			path = GMReplyView;
 			sourceTree = "<group>";
@@ -1645,6 +1661,10 @@
 				26D13F031A336B370030ED92 /* GMContentNewsScrollModel.m */,
 				2657FA731A3559BB00B1896E /* GMNewsDetailModel.h */,
 				2657FA741A3559BB00B1896E /* GMNewsDetailModel.m */,
+				26706CEA1A37326A008C9766 /* GMNewsReplyModel.h */,
+				26706CEB1A37326A008C9766 /* GMNewsReplyModel.m */,
+				26706CED1A3732DE008C9766 /* GMNewsReplySubModel.h */,
+				26706CEE1A3732DE008C9766 /* GMNewsReplySubModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1957,6 +1977,7 @@
 				1804F0251A1EDDBF00214B3E /* YRSideViewController.m in Sources */,
 				2657FA6C1A3554F700B1896E /* MLNavigationController.m in Sources */,
 				1804F0A61A1EDDC000214B3E /* SVModalWebViewController.m in Sources */,
+				26706CF21A3736E9008C9766 /* GMNewsReplyCell.m in Sources */,
 				1804F0381A1EDDBF00214B3E /* NSError+MTLModelException.m in Sources */,
 				18AEBE8019D3DDCD007DA3A9 /* GMPhoneRegistViewController.m in Sources */,
 				2679DD741A35FA96000881C7 /* ALMoviePlayerController.m in Sources */,
@@ -2028,10 +2049,12 @@
 				1804F0641A1EDDBF00214B3E /* SDWebImageManager.m in Sources */,
 				1804F0AB1A1EDDC000214B3E /* TMMemoryCache.m in Sources */,
 				2679DD471A35CEA9000881C7 /* GMCommonAndVideoView.m in Sources */,
+				26706CE91A372FDA008C9766 /* GMNewsHeadView.m in Sources */,
 				1804F0591A1EDDBF00214B3E /* NSString+ObjectiveSugar.m in Sources */,
 				2679DD751A35FA96000881C7 /* ALMoviePlayerControls.m in Sources */,
 				1804F03F1A1EDDBF00214B3E /* MBProgressHUD.m in Sources */,
 				26D13EDB1A335BE80030ED92 /* AFHTTPClient.m in Sources */,
+				26706CEF1A3732DE008C9766 /* GMNewsReplySubModel.m in Sources */,
 				1804F03B1A1EDDBF00214B3E /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				1804F0A81A1EDDC000214B3E /* SVWebViewController.m in Sources */,
 				1804F0321A1EDDBF00214B3E /* MTLModel+NSCoding.m in Sources */,
@@ -2081,6 +2104,7 @@
 				1804F0AE1A1EDDC000214B3E /* UIAlertView+MKBlockAdditions.m in Sources */,
 				26D13EE01A335BE80030ED92 /* AFPropertyListRequestOperation.m in Sources */,
 				1804F0B91A1EDDC000214B3E /* UIViewController+Custom.m in Sources */,
+				26706CEC1A37326A008C9766 /* GMNewsReplyModel.m in Sources */,
 				269178E31A320F11004FF783 /* HomePageViewController.m in Sources */,
 				26D13F001A336ADC0030ED92 /* MyPageControl.m in Sources */,
 				269178D01A320EEE004FF783 /* TopTitleSubListModel.m in Sources */,

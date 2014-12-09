@@ -11,6 +11,7 @@
 #import "TopTitleModel.h"
 #import "GMContentNewsModel.h"
 #import "GMContentNewsScrollModel.h"
+#import "GMNewsReplyModel.h"
 @implementation GMHttpRequest
 //获取Dictionary数据
 + (void)getDictionaryWithStringURL:(NSString *)stringURL usingSuccessBlock:(void (^)(NSDictionary *resultDictionary))successBlock andFailureBlock:(void (^)(NSError *resultError))failureBlock
@@ -150,5 +151,44 @@
     detailModel.newsRelated=aboutNewsList;
     successBlock(YES,detailModel);
     
+}
++(void)getNewsReplyDetailList:(NSInteger)newsID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    GMNewsReplyModel *reply1=[[GMNewsReplyModel alloc]init];
+    reply1.newsMark=@"热门评论";
+    for (int i=0; i<10; i++) {
+        GMNewsReplySubModel *subModel=[[GMNewsReplySubModel alloc]init];
+        subModel.newsPraiseCount=@"88";
+        subModel.newsPraised=@"0";
+        subModel.newsReplyID=@"1";
+        subModel.newsReplyTime=@"一小时前";
+        subModel.newsUserAvatar=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        subModel.newsUserName=@"腾讯组";
+        subModel.newsUserSourece=@"山东聊城";
+        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟。angelaBaby I love you so much";
+        subModel.newsReplyLoaction=@"发表于地球村南村镇中医院癌症专区";
+        [reply1.list addObject:subModel];
+    }
+    [list addObject:reply1];
+    
+    GMNewsReplyModel *reply2=[[GMNewsReplyModel alloc]init];
+    reply2.newsMark=@"最新评论";
+    for (int i=0; i<10; i++) {
+        GMNewsReplySubModel *subModel=[[GMNewsReplySubModel alloc]init];
+        subModel.newsPraiseCount=@"88";
+        subModel.newsPraised=@"0";
+        subModel.newsReplyID=@"1";
+        subModel.newsReplyTime=@"一小时前";
+        subModel.newsUserAvatar=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        subModel.newsUserName=@"腾讯组";
+        subModel.newsUserSourece=@"山东聊城";
+        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟。angelaBaby I love you so much";
+        subModel.newsReplyLoaction=@"发表于地球村南村镇中医院癌症专区";
+        [reply2.list addObject:subModel];
+    }
+    [list addObject:reply2];
+    
+    successBlock(YES,list);
 }
 @end
