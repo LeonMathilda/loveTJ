@@ -10,5 +10,5 @@
 #import "GMNewsReplySubModel.h"
 @interface GMNewsReplyModel : ITTBaseModelObject
 @property(nonatomic,retain)NSString *newsMark;//最新评论 热门评论
-@property(nonatomic,retain)NSMutableArray *list;//内容列表 content is GMNewsReplyModel
+@property(nonatomic,retain)NSMutableArray *list;//内容列表 content is GMNewsReplySubModel
 @end

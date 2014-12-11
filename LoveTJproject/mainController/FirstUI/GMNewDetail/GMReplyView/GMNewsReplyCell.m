@@ -7,6 +7,7 @@
 //
 
 #import "GMNewsReplyCell.h"
+#import  "GMMenulabel.h"
 #define GMNewsReplyCell_topPlace 20
 #define GMNewsReplyCell_leftPlace 9
 #define GMNewsReplyCell_avatarHight 40
@@ -58,7 +59,11 @@
     source.frame=CGRectMake(source.frame.origin.x, headView.frame.origin.y+headView.frame.size.height-source.frame.size.height, contentWidth, source.frame.size.height);
     [self.contentView addSubview:source];
     
-    UILabel *content=[[UILabel alloc]init];
+    content=[[GMMenulabel alloc]init];
+    
+    [self addMuenue];
+    
+    
     content.numberOfLines=0;
     content.frame=CGRectMake(name.frame.origin.x, headView.frame.size.height+headView.frame.origin.y+GMNewsReplyCell_avatar_contentPlace, contentWidth, [GGUtil text:model.newsReplyContent sizeWithFont:GMNewsReplyCell_contentFont constrainedToSize:CGSizeMake(contentWidth,MAXFLOAT)].height);
     content.backgroundColor=[UIColor clearColor];
@@ -87,6 +92,24 @@
     line.alpha=0.5;
     [self.contentView addSubview:line];
 }
+-(void)addMuenue
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    
+    GMmenuItem *ding = [[GMmenuItem alloc]initWithTitle:@"顶一下" tager:self action:@selector(CourseCellMsgParse)];
+    [list addObject:ding];
+    
+    GMmenuItem *reply = [[GMmenuItem alloc]initWithTitle:@"评一下" tager:self action:@selector(CourseCellMsgReply)];
+    [list addObject:reply];
+    
+    GMmenuItem *report = [[GMmenuItem alloc]initWithTitle:@"举报" tager:self action:@selector(CourseCellMsgReport)];
+    [list addObject:report];
+
+    GMmenuItem *copy = [[GMmenuItem alloc]initWithTitle:@"复制" tager:self action:@selector(CourseCellMsgCopy)];
+    [list addObject:copy];
+    
+    [content showMenuItem:list];
+}
 +(float)cellHight:(GMNewsReplySubModel *)model
 {
     float higth=GMNewsReplyCell_topPlace+GMNewsReplyCell_avatarHight+GMNewsReplyCell_avatar_contentPlace;
@@ -100,6 +123,10 @@
     higth+=GMNewsReplyCell_buttomPlace;
     return higth;
 }
+-(void)hiddenMenu
+{
+    [content WillmenuHiden];
+}
 -(void)clickAvatar
 {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickAvatar:)]) {
@@ -110,6 +137,30 @@
 {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickLoaction:)]) {
         [self.delegate GMNewsReplyCellDelegateClickLoaction:self];
+    }
+}
+-(void)CourseCellMsgCopy
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickCopy:)]) {
+        [self.delegate GMNewsReplyCellDelegateClickCopy:self];
+    }
+}
+-(void)CourseCellMsgParse
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickParese:)]) {
+        [self.delegate GMNewsReplyCellDelegateClickParese:self];
+    }
+}
+-(void)CourseCellMsgReply
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickReply:)]) {
+        [self.delegate GMNewsReplyCellDelegateClickReply:self];
+    }
+}
+-(void)CourseCellMsgReport
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyCellDelegateClickReport:)]) {
+        [self.delegate GMNewsReplyCellDelegateClickReport:self];
     }
 }
 - (void)awakeFromNib {

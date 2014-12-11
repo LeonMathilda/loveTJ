@@ -97,6 +97,18 @@
     [cell restCell:[model.list objectAtIndex:indexPath.row]];
     return cell;
 }
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSArray *_cellArray = [mTableView visibleCells];
+    if([_cellArray count] > 0)
+    {
+        [_cellArray makeObjectsPerformSelector:@selector(hiddenMenu)];
+    }
+}
+-(void)scrollerCell:(GMNewsReplyCell *)cell
+{
+    [mTableView scrollToRowAtIndexPath:[mTableView indexPathForCell:cell] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
 -(void)setFrame:(CGRect)frame
 {
     mTableView.frame=CGRectMake(0,0 , frame.size.width, frame.size.height);
@@ -117,22 +129,51 @@
 }
 
 #pragma cell delegate
+-(GMNewsReplySubModel *)getIndexModel:(GMNewsReplyCell *)cell
+{
+    NSIndexPath *path=[mTableView indexPathForCell:cell];
+    GMNewsReplyModel *model=[list objectAtIndex:path.section];
+    return [model.list objectAtIndex:path.row];
+}
 -(void)GMNewsReplyCellDelegateClickAvatar:(GMNewsReplyCell *)cell
 {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickAvatar:)]) {
-        NSIndexPath *path=[mTableView indexPathForCell:cell];
-        GMNewsReplyModel *model=[list objectAtIndex:path.section];
-        [self.delegate GMNewsReplyViewDelegateClickAvatar:[model.list objectAtIndex:path.row]];
+       
+        [self.delegate GMNewsReplyViewDelegateClickAvatar:[self getIndexModel:cell]];
     }
 }
 -(void)GMNewsReplyCellDelegateClickLoaction:(GMNewsReplyCell *)cell
 {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickLocation:)]) {
-        NSIndexPath *path=[mTableView indexPathForCell:cell];
-        GMNewsReplyModel *model=[list objectAtIndex:path.section];
-        [self.delegate GMNewsReplyViewDelegateClickLocation:[model.list objectAtIndex:path.row]];
+        [self.delegate GMNewsReplyViewDelegateClickLocation:[self getIndexModel:cell]];
     }
 }
+-(void)GMNewsReplyCellDelegateClickCopy:(GMNewsReplyCell *)cell
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickCopy:cell:)]) {
+        [self.delegate GMNewsReplyViewDelegateClickCopy:[self getIndexModel:cell] cell:cell];
+    }
+}
+-(void)GMNewsReplyCellDelegateClickParese:(GMNewsReplyCell *)cell
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickParese:cell:)]) {
+        [self.delegate GMNewsReplyViewDelegateClickParese:[self getIndexModel:cell] cell:cell];
+    }
+}
+-(void)GMNewsReplyCellDelegateClickReply:(GMNewsReplyCell *)cell
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickReply:cell:)]) {
+        [self.delegate GMNewsReplyViewDelegateClickReply:[self getIndexModel:cell] cell:cell];
+    }
+}
+-(void)GMNewsReplyCellDelegateClickReport:(GMNewsReplyCell *)cell
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(GMNewsReplyViewDelegateClickReport:cell:)]) {
+        [self.delegate GMNewsReplyViewDelegateClickReport:[self getIndexModel:cell] cell:cell];
+    }
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

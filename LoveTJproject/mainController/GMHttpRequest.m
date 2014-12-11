@@ -166,7 +166,7 @@
         subModel.newsUserAvatar=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
         subModel.newsUserName=@"腾讯组";
         subModel.newsUserSourece=@"山东聊城";
-        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟。angelaBaby I love you so much";
+        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧奔跑吧兄弟奔跑吧兄弟兄弟。angelaBaby I love you so much";
         subModel.newsReplyLoaction=@"发表于地球村南村镇中医院癌症专区";
         [reply1.list addObject:subModel];
     }
@@ -183,7 +183,7 @@
         subModel.newsUserAvatar=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
         subModel.newsUserName=@"腾讯组";
         subModel.newsUserSourece=@"山东聊城";
-        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟。angelaBaby I love you so much";
+        subModel.newsReplyContent=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟 奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟。angelaBaby I love you so much";
         subModel.newsReplyLoaction=@"发表于地球村南村镇中医院癌症专区";
         [reply2.list addObject:subModel];
     }

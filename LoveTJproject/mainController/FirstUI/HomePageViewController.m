@@ -12,6 +12,7 @@
 #import "TopTitleView.h"
 #import "GMAddDifferentTitleController.h"
 #import "GMNewsDetailViewController.h"
+#import "GMPhotosViewController.h"
 @interface HomePageViewController ()<UIScrollViewDelegate,TopTitleViewDelegate,GMAddDifferentTitleControllerDelegate,ContentScrollViewDelegate>
 {
     TopTitleModel *titleModel;
@@ -97,10 +98,15 @@
 }
 -(void)ContentScrollViewDelegateSelect:(GMContentNewsModel *)subModel
 {
+    if (subModel.newsImages.count) {
+        GMPhotosViewController *photos=[[GMPhotosViewController alloc]init];
+        [self.navigationController pushViewController:photos animated:YES];
+    }else
+    {
     GMNewsDetailViewController *newsDetailController=[[GMNewsDetailViewController alloc]init];
     newsDetailController.titleModel=subModel;
     [self.navigationController pushViewController:newsDetailController animated:YES];
-    
+    }
 }
 -(void)viewWillAppear:(BOOL)animated
 {
