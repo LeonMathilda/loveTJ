@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GMPhoto : NSObject
-
+@property(nonatomic,retain)NSString *url;
+@property(nonatomic,retain)NSString *title;
+@property(nonatomic,retain)UIView *view;
 @end

@@ -100,6 +100,7 @@
 {
     if (subModel.newsImages.count) {
         GMPhotosViewController *photos=[[GMPhotosViewController alloc]init];
+        photos.titleModel=subModel;
         [self.navigationController pushViewController:photos animated:YES];
     }else
     {

@@ -18,6 +18,7 @@
 +(void)getLunBoList:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 
 +(void)newsDetail:(NSInteger)newsID usingSuccessBlock:(void (^)(BOOL isSuccess,GMNewsDetailModel  *result))successBlock;
++(void)newsDetailPhotos:(NSInteger)newsID usingSuccessBlock:(void (^)(BOOL isSuccess,GMNewsDetailModel  *result))successBlock;
 
 +(void)getNewsReplyDetailList:(NSInteger)newsID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 @end

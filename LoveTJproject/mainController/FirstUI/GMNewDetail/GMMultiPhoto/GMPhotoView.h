@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GMPhoto.h"
 @interface GMPhotoView : UIScrollView
-
+@property(nonatomic,strong)GMPhoto *photo;
 @end

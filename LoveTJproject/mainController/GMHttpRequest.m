@@ -191,4 +191,31 @@
     
     successBlock(YES,list);
 }
++(void)newsDetailPhotos:(NSInteger)newsID usingSuccessBlock:(void (^)(BOOL isSuccess,GMNewsDetailModel  *result))successBlock
+{
+    GMNewsDetailModel *detailModel=[[GMNewsDetailModel alloc]init];
+    detailModel.newsContent=@"";
+    detailModel.newsTitle=@"重大新闻,敬请留意";
+    detailModel.newsTime=@"2014/09/20";
+    detailModel.newsSourse=@"中国青年网";
+    detailModel.newsReplyCount=@"2222";
+    detailModel.newsType=GMNewsDetailType_common;
+    if (newsID%2==0) {
+        detailModel.newsType=GMNewsDetailType_video;
+        detailModel.newsVideoImage=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        detailModel.newsVidelUrl=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+    }
+    
+    detailModel.newsTopImage=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+    NSMutableArray *aboutNewsList=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0; i<4; i++) {
+        GMContentNewsScrollModel *aboutModel=[[GMContentNewsScrollModel alloc]init];
+        aboutModel.newsImagePath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        aboutModel.newsTitle=@"天上飘来五个字：那都是不是事。 奔跑吧兄弟 奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟天上飘来五个字：那都是不是事。 奔跑吧兄弟 奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟天上飘来五个字：那都是不是事。 奔跑吧兄弟 奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟天上飘来五个字：那都是不是事。 奔跑吧兄弟 奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟奔跑吧兄弟";
+        aboutModel.newsID=@"3";
+        [aboutNewsList addObject:aboutModel];
+    }
+    detailModel.newsImages=aboutNewsList;
+    successBlock(YES,detailModel);
+}
 @end

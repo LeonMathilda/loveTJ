@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "BaceViewController.h"
 @interface GMPhotosViewController : BaceViewController
-
+@property(nonatomic,strong)GMContentNewsModel *titleModel;
 @end

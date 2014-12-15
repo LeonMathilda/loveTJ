@@ -252,6 +252,7 @@
 		2679DD841A35FA96000881C7 /* moviePlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2679DD701A35FA96000881C7 /* moviePlay.png */; };
 		2679DD851A35FA96000881C7 /* moviePlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2679DD711A35FA96000881C7 /* moviePlay@2x.png */; };
 		2679DD871A35FAC9000881C7 /* popeye.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2679DD861A35FAC9000881C7 /* popeye.mp4 */; };
+		2687D15D1A3ECA5900195D17 /* GMPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2687D15C1A3ECA5900195D17 /* GMPhotoScrollView.m */; };
 		2691786F1A31E646004FF783 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2691786E1A31E646004FF783 /* Launch Screen.xib */; };
 		269178CE1A320EEE004FF783 /* ITTBaseModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178C91A320EEE004FF783 /* ITTBaseModelObject.m */; };
 		269178CF1A320EEE004FF783 /* TopTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178CB1A320EEE004FF783 /* TopTitleModel.m */; };
@@ -263,6 +264,7 @@
 		269178E01A320F07004FF783 /* BaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178DF1A320F07004FF783 /* BaceViewController.m */; };
 		269178E31A320F11004FF783 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E21A320F11004FF783 /* HomePageViewController.m */; };
 		269178E61A320F53004FF783 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E51A320F53004FF783 /* BaseNavViewController.m */; };
+		26B208B91A3EF07700396A92 /* GMPhotoButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B208B81A3EF07700396A92 /* GMPhotoButtomView.m */; };
 		26D13EDB1A335BE80030ED92 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EAB1A335BE80030ED92 /* AFHTTPClient.m */; };
 		26D13EDC1A335BE80030ED92 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EAD1A335BE80030ED92 /* AFHTTPRequestOperation.m */; };
 		26D13EDD1A335BE80030ED92 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EAF1A335BE80030ED92 /* AFImageRequestOperation.m */; };
@@ -706,6 +708,8 @@
 		2679DD701A35FA96000881C7 /* moviePlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moviePlay.png; sourceTree = "<group>"; };
 		2679DD711A35FA96000881C7 /* moviePlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moviePlay@2x.png"; sourceTree = "<group>"; };
 		2679DD861A35FAC9000881C7 /* popeye.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = popeye.mp4; sourceTree = "<group>"; };
+		2687D15B1A3ECA5900195D17 /* GMPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhotoScrollView.h; sourceTree = "<group>"; };
+		2687D15C1A3ECA5900195D17 /* GMPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhotoScrollView.m; sourceTree = "<group>"; };
 		2691786E1A31E646004FF783 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		269178C81A320EEE004FF783 /* ITTBaseModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTBaseModelObject.h; sourceTree = "<group>"; };
 		269178C91A320EEE004FF783 /* ITTBaseModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTBaseModelObject.m; sourceTree = "<group>"; };
@@ -727,6 +731,8 @@
 		269178E21A320F11004FF783 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		269178E41A320F53004FF783 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		269178E51A320F53004FF783 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		26B208B71A3EF07700396A92 /* GMPhotoButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhotoButtomView.h; sourceTree = "<group>"; };
+		26B208B81A3EF07700396A92 /* GMPhotoButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhotoButtomView.m; sourceTree = "<group>"; };
 		26D13EAA1A335BE80030ED92 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		26D13EAB1A335BE80030ED92 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		26D13EAC1A335BE80030ED92 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1577,6 +1583,10 @@
 				26257F931A3999DD00CDAE00 /* GMPhoto.m */,
 				26257F951A3999F200CDAE00 /* GMPhotoView.h */,
 				26257F961A3999F200CDAE00 /* GMPhotoView.m */,
+				2687D15B1A3ECA5900195D17 /* GMPhotoScrollView.h */,
+				2687D15C1A3ECA5900195D17 /* GMPhotoScrollView.m */,
+				26B208B71A3EF07700396A92 /* GMPhotoButtomView.h */,
+				26B208B81A3EF07700396A92 /* GMPhotoButtomView.m */,
 			);
 			path = GMMultiPhoto;
 			sourceTree = "<group>";
@@ -2027,6 +2037,7 @@
 				26706CF21A3736E9008C9766 /* GMNewsReplyCell.m in Sources */,
 				1804F0381A1EDDBF00214B3E /* NSError+MTLModelException.m in Sources */,
 				18AEBE8019D3DDCD007DA3A9 /* GMPhoneRegistViewController.m in Sources */,
+				26B208B91A3EF07700396A92 /* GMPhotoButtomView.m in Sources */,
 				2679DD741A35FA96000881C7 /* ALMoviePlayerController.m in Sources */,
 				1804F0301A1EDDBF00214B3E /* MTLJSONAdapter.m in Sources */,
 				1804F0B31A1EDDC000214B3E /* UIImage-Extensions.m in Sources */,
@@ -2131,6 +2142,7 @@
 				269178DC1A320EFA004FF783 /* TopTitleScrollerView.m in Sources */,
 				1804F0461A1EDDBF00214B3E /* MJPhotoView.m in Sources */,
 				1804F05E1A1EDDBF00214B3E /* SDImageCache.m in Sources */,
+				2687D15D1A3ECA5900195D17 /* GMPhotoScrollView.m in Sources */,
 				1818B3C019BEE6060075C2EA /* GMSecondViewController.m in Sources */,
 				1804F01D1A1EDDBF00214B3E /* JDStatusBarNotification.m in Sources */,
 				26D13EF41A3363B30030ED92 /* GMContentNewsButtomView.m in Sources */,
