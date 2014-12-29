@@ -31,6 +31,7 @@
             titleModel=result;
             [titleView restTopTitleView:result];
             [contentScroll restContentView:result];
+            [self restHeadLunBoData];
         }
     }];
 }
@@ -59,7 +60,7 @@
     [self.view addSubview:contentScroll];
     
     [self restSource];
-    [self restHeadLunBoData];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

@@ -12,6 +12,7 @@
 #import "GMContentNewsModel.h"
 #import "GMContentNewsScrollModel.h"
 #import "GMNewsReplyModel.h"
+#import "GMForumModel.h"
 @implementation GMHttpRequest
 //获取Dictionary数据
 + (void)getDictionaryWithStringURL:(NSString *)stringURL usingSuccessBlock:(void (^)(NSDictionary *resultDictionary))successBlock andFailureBlock:(void (^)(NSError *resultError))failureBlock
@@ -209,5 +210,55 @@
     }
     detailModel.newsImages=aboutNewsList;
     successBlock(YES,detailModel);
+}
++(void)getForumList:(NSInteger)forumID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0; i<5; i++) {
+        GMForumModel *forumModel=[[GMForumModel alloc]init];
+        forumModel.newsMark=@"测试";
+        [list addObject:forumModel];
+        for (int k=0; k<10; k++) {
+            GMContentNewsModel *model=[[GMContentNewsModel alloc]init];
+            [forumModel.list addObject:model];
+            model.newsTitle=@"测试数据标题";
+            model.newsID=[NSString stringWithFormat:@"%d",i+1];
+            model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+            model.newsReplyCount=@"303.3万";
+            model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
+            if (i%5==0) {
+                model.newsImages=[NSMutableArray arrayWithObjects:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg", nil];
+                model.newsImageCount=@"8";
+            }
+            if (i%3==0) {
+                model.newsClass=@"独家";
+            }
+            
+        }
+        
+    }
+    successBlock(YES,list);
+}
++(void)getForumLunBoList:(NSInteger)forumID  usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0;i<4;i++) {
+        GMContentNewsScrollModel *scrollModel=[[GMContentNewsScrollModel alloc]init];
+        scrollModel.newsTitle=@"测试测试";
+        scrollModel.newsImagePath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        [list addObject:scrollModel];
+    }
+    successBlock(YES,list);
+}
++(void)getForumSubList:(NSInteger)forumID  usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0;i<4;i++) {
+        GMContentNewsScrollModel *scrollModel=[[GMContentNewsScrollModel alloc]init];
+        scrollModel.newsTitle=@"测试测试";
+        scrollModel.newsImagePath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        [list addObject:scrollModel];
+    }
+    successBlock(YES,list);
 }
 @end

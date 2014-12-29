@@ -208,6 +208,9 @@
 		18AEBE7C19D3D370007DA3A9 /* GMmainLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AEBE7A19D3D370007DA3A9 /* GMmainLoginViewViewController.xib */; };
 		18AEBE8019D3DDCD007DA3A9 /* GMPhoneRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE7E19D3DDCD007DA3A9 /* GMPhoneRegistViewController.m */; };
 		18AEBE8119D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AEBE7F19D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib */; };
+		260F5B541A517D2F00F96FA2 /* GMForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F5B531A517D2F00F96FA2 /* GMForumModel.m */; };
+		260F5B581A5181DA00F96FA2 /* GMForumHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F5B571A5181DA00F96FA2 /* GMForumHeadView.m */; };
+		260F5B5B1A51846F00F96FA2 /* GMForumHeadViewListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F5B5A1A51846F00F96FA2 /* GMForumHeadViewListView.m */; };
 		26257F861A393FDC00CDAE00 /* textKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26257F851A393FDC00CDAE00 /* textKeyBoardView.m */; };
 		26257F8A1A39828200CDAE00 /* GMMenulabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26257F891A39828200CDAE00 /* GMMenulabel.m */; };
 		26257F8D1A3982DE00CDAE00 /* GMmenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26257F8C1A3982DE00CDAE00 /* GMmenuItem.m */; };
@@ -639,6 +642,12 @@
 		18AEBE7D19D3DDCD007DA3A9 /* GMPhoneRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhoneRegistViewController.h; sourceTree = "<group>"; };
 		18AEBE7E19D3DDCD007DA3A9 /* GMPhoneRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhoneRegistViewController.m; sourceTree = "<group>"; };
 		18AEBE7F19D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMPhoneRegistViewController.xib; sourceTree = "<group>"; };
+		260F5B521A517D2F00F96FA2 /* GMForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMForumModel.h; sourceTree = "<group>"; };
+		260F5B531A517D2F00F96FA2 /* GMForumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMForumModel.m; sourceTree = "<group>"; };
+		260F5B561A5181DA00F96FA2 /* GMForumHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMForumHeadView.h; sourceTree = "<group>"; };
+		260F5B571A5181DA00F96FA2 /* GMForumHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMForumHeadView.m; sourceTree = "<group>"; };
+		260F5B591A51846F00F96FA2 /* GMForumHeadViewListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMForumHeadViewListView.h; sourceTree = "<group>"; };
+		260F5B5A1A51846F00F96FA2 /* GMForumHeadViewListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMForumHeadViewListView.m; sourceTree = "<group>"; };
 		26257F841A393FDC00CDAE00 /* textKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textKeyBoardView.h; sourceTree = "<group>"; };
 		26257F851A393FDC00CDAE00 /* textKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textKeyBoardView.m; sourceTree = "<group>"; };
 		26257F881A39828200CDAE00 /* GMMenulabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMenulabel.h; sourceTree = "<group>"; };
@@ -1511,6 +1520,7 @@
 		183622B619DE702A00BC0C65 /* mainController */ = {
 			isa = PBXGroup;
 			children = (
+				260F5B551A5181BF00F96FA2 /* ForumView */,
 				2679DD861A35FAC9000881C7 /* popeye.mp4 */,
 				2679DD581A35FA96000881C7 /* ALMoviePlayerController */,
 				2657FA6E1A35551F00B1896E /* BaseController */,
@@ -1561,6 +1571,17 @@
 			children = (
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		260F5B551A5181BF00F96FA2 /* ForumView */ = {
+			isa = PBXGroup;
+			children = (
+				260F5B561A5181DA00F96FA2 /* GMForumHeadView.h */,
+				260F5B571A5181DA00F96FA2 /* GMForumHeadView.m */,
+				260F5B591A51846F00F96FA2 /* GMForumHeadViewListView.h */,
+				260F5B5A1A51846F00F96FA2 /* GMForumHeadViewListView.m */,
+			);
+			path = ForumView;
 			sourceTree = "<group>";
 		};
 		26257F871A39826000CDAE00 /* GMMeue */ = {
@@ -1721,6 +1742,8 @@
 				26706CEB1A37326A008C9766 /* GMNewsReplyModel.m */,
 				26706CED1A3732DE008C9766 /* GMNewsReplySubModel.h */,
 				26706CEE1A3732DE008C9766 /* GMNewsReplySubModel.m */,
+				260F5B521A517D2F00F96FA2 /* GMForumModel.h */,
+				260F5B531A517D2F00F96FA2 /* GMForumModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2038,6 +2061,7 @@
 				1804F0381A1EDDBF00214B3E /* NSError+MTLModelException.m in Sources */,
 				18AEBE8019D3DDCD007DA3A9 /* GMPhoneRegistViewController.m in Sources */,
 				26B208B91A3EF07700396A92 /* GMPhotoButtomView.m in Sources */,
+				260F5B541A517D2F00F96FA2 /* GMForumModel.m in Sources */,
 				2679DD741A35FA96000881C7 /* ALMoviePlayerController.m in Sources */,
 				1804F0301A1EDDBF00214B3E /* MTLJSONAdapter.m in Sources */,
 				1804F0B31A1EDDC000214B3E /* UIImage-Extensions.m in Sources */,
@@ -2079,6 +2103,7 @@
 				1804F02D1A1EDDBF00214B3E /* split.c in Sources */,
 				26D13EF71A3366E70030ED92 /* GMContentNewsDefaultView.m in Sources */,
 				1804F0341A1EDDBF00214B3E /* MTLReflection.m in Sources */,
+				260F5B5B1A51846F00F96FA2 /* GMForumHeadViewListView.m in Sources */,
 				1804F05A1A1EDDBF00214B3E /* DRNRealTimeBlurView.m in Sources */,
 				26257F911A3999C500CDAE00 /* GMPhotosViewController.m in Sources */,
 				1804F04D1A1EDDBF00214B3E /* UIScrollView+MJRefresh.m in Sources */,
@@ -2132,6 +2157,7 @@
 				1804F0B01A1EDDC000214B3E /* UIImage+ColorAtPixel.m in Sources */,
 				1804F0451A1EDDBF00214B3E /* MJPhotoToolbar.m in Sources */,
 				26D13EDF1A335BE80030ED92 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				260F5B581A5181DA00F96FA2 /* GMForumHeadView.m in Sources */,
 				269178E61A320F53004FF783 /* BaseNavViewController.m in Sources */,
 				1804F0B51A1EDDC000214B3E /* UILabel+FormattedText.m in Sources */,
 				1804F0201A1EDDBF00214B3E /* JTMappings.m in Sources */,
