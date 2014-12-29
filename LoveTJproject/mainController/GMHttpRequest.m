@@ -64,27 +64,19 @@
 
 +(void)getDifferentTitle:(NSInteger)uid usingSuccessBlock:(void (^)(BOOL isSuccess,TopTitleModel  *result))successBlock
 {
-    
-    
-    TopTitleModel *topModel=[[TopTitleModel alloc]init];
-    for (int i=0; i<8; i++) {
-        TopTitleSubListModel *subModel=[[TopTitleSubListModel alloc]init];
-        subModel.titID=[NSString stringWithFormat:@"%i",i+1];
-        subModel.title=[NSString stringWithFormat:@"标题%d",i+1];
-        [topModel.list addObject:subModel];
-    }
-    
-    successBlock(YES,topModel);
-    return;
-    
-    NSString *stringURL = @"";
-    
+    NSString *stringURL = [NSString stringWithFormat:@"%@/getncate",MAIN_HEAD_URL];
     [GMHttpRequest getDictionaryWithStringURL:stringURL usingSuccessBlock:^(NSDictionary *resultDictionary) {
         
-        if (1 == [resultDictionary [@"s"] integerValue]) {
-            successBlock(YES,nil);
+        if ([resultDictionary objectForKey:@"s"]&&0 == [[resultDictionary objectForKey:@"s" ]  integerValue]) {
+            TopTitleModel *topModel=[[TopTitleModel alloc]init];
+            for (NSDictionary *dic in [resultDictionary objectForKey:@"data"]) {
+                TopTitleSubListModel *subModel=[[TopTitleSubListModel alloc]initWithDataDic:dic];
+                [topModel.list addObject:subModel];
+            }
+            successBlock(YES,topModel);
         }else{
             successBlock(NO,nil);
+            [CustomMethod showWaringMessage:[resultDictionary objectForKey:@"msg"]];
         }
         
     } andFailureBlock:^(NSError *resultError) {

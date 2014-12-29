@@ -10,4 +10,6 @@
 @interface TopTitleSubListModel : ITTBaseModelObject
 @property(nonatomic,retain)NSString *title;
 @property(nonatomic,retain)NSString *titID;
+@property(nonatomic,retain)NSString *parent;
+@property(nonatomic,retain)NSString *tpl_path_id;
 @end

@@ -11,4 +11,13 @@
 @implementation TopTitleSubListModel
 @synthesize titID=_titID;
 @synthesize title=_title;
+- (NSDictionary*)attributeMapDictionary
+{
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            @"ncid",@"titID"
+            ,@"name",@"title"
+            ,@"parent",@"parent"
+            ,@"tpl_path_id",@"tpl_path_id"
+            ,nil];
+}
 @end

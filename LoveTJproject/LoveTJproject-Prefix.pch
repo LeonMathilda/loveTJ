@@ -31,4 +31,5 @@
 #import "CustomMethod.h"
 #import "MJRefresh.h"
 //#import "AGViewDelegate.h"
+#define MAIN_HEAD_URL @"http://za.tjfer.com/appapi"
 #endif
