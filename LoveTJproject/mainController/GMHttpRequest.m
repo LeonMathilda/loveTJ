@@ -226,11 +226,11 @@
             model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
             model.newsReplyCount=@"303.3万";
             model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
-            if (i%5==0) {
+            if (k%5==0) {
                 model.newsImages=[NSMutableArray arrayWithObjects:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg", nil];
                 model.newsImageCount=@"8";
             }
-            if (i%3==0) {
+            if (k%3==0) {
                 model.newsClass=@"独家";
             }
             
