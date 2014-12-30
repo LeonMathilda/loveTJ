@@ -267,6 +267,11 @@
 		269178E01A320F07004FF783 /* BaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178DF1A320F07004FF783 /* BaceViewController.m */; };
 		269178E31A320F11004FF783 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E21A320F11004FF783 /* HomePageViewController.m */; };
 		269178E61A320F53004FF783 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E51A320F53004FF783 /* BaseNavViewController.m */; };
+		26AD0F7E1A52C99F00F2FB24 /* GMSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F7D1A52C99F00F2FB24 /* GMSearchBar.m */; };
+		26AD0F811A52D1A900F2FB24 /* GMPlateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F801A52D1A900F2FB24 /* GMPlateModel.m */; };
+		26AD0F841A52D1BB00F2FB24 /* GMPlateSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F831A52D1BB00F2FB24 /* GMPlateSubModel.m */; };
+		26AD0F871A52D56000F2FB24 /* GMPlatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F861A52D56000F2FB24 /* GMPlatCell.m */; };
+		26AD0F8A1A52DC8F00F2FB24 /* GMPlatHeadCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F891A52DC8F00F2FB24 /* GMPlatHeadCellView.m */; };
 		26B208B91A3EF07700396A92 /* GMPhotoButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B208B81A3EF07700396A92 /* GMPhotoButtomView.m */; };
 		26D13EDB1A335BE80030ED92 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EAB1A335BE80030ED92 /* AFHTTPClient.m */; };
 		26D13EDC1A335BE80030ED92 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D13EAD1A335BE80030ED92 /* AFHTTPRequestOperation.m */; };
@@ -740,6 +745,16 @@
 		269178E21A320F11004FF783 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		269178E41A320F53004FF783 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		269178E51A320F53004FF783 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		26AD0F7C1A52C99F00F2FB24 /* GMSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSearchBar.h; sourceTree = "<group>"; };
+		26AD0F7D1A52C99F00F2FB24 /* GMSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSearchBar.m; sourceTree = "<group>"; };
+		26AD0F7F1A52D1A900F2FB24 /* GMPlateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlateModel.h; sourceTree = "<group>"; };
+		26AD0F801A52D1A900F2FB24 /* GMPlateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlateModel.m; sourceTree = "<group>"; };
+		26AD0F821A52D1BB00F2FB24 /* GMPlateSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlateSubModel.h; sourceTree = "<group>"; };
+		26AD0F831A52D1BB00F2FB24 /* GMPlateSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlateSubModel.m; sourceTree = "<group>"; };
+		26AD0F851A52D56000F2FB24 /* GMPlatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatCell.h; sourceTree = "<group>"; };
+		26AD0F861A52D56000F2FB24 /* GMPlatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatCell.m; sourceTree = "<group>"; };
+		26AD0F881A52DC8F00F2FB24 /* GMPlatHeadCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatHeadCellView.h; sourceTree = "<group>"; };
+		26AD0F891A52DC8F00F2FB24 /* GMPlatHeadCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatHeadCellView.m; sourceTree = "<group>"; };
 		26B208B71A3EF07700396A92 /* GMPhotoButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhotoButtomView.h; sourceTree = "<group>"; };
 		26B208B81A3EF07700396A92 /* GMPhotoButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhotoButtomView.m; sourceTree = "<group>"; };
 		26D13EAA1A335BE80030ED92 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -1580,6 +1595,12 @@
 				260F5B571A5181DA00F96FA2 /* GMForumHeadView.m */,
 				260F5B591A51846F00F96FA2 /* GMForumHeadViewListView.h */,
 				260F5B5A1A51846F00F96FA2 /* GMForumHeadViewListView.m */,
+				26AD0F7C1A52C99F00F2FB24 /* GMSearchBar.h */,
+				26AD0F7D1A52C99F00F2FB24 /* GMSearchBar.m */,
+				26AD0F851A52D56000F2FB24 /* GMPlatCell.h */,
+				26AD0F861A52D56000F2FB24 /* GMPlatCell.m */,
+				26AD0F881A52DC8F00F2FB24 /* GMPlatHeadCellView.h */,
+				26AD0F891A52DC8F00F2FB24 /* GMPlatHeadCellView.m */,
 			);
 			path = ForumView;
 			sourceTree = "<group>";
@@ -1744,6 +1765,10 @@
 				26706CEE1A3732DE008C9766 /* GMNewsReplySubModel.m */,
 				260F5B521A517D2F00F96FA2 /* GMForumModel.h */,
 				260F5B531A517D2F00F96FA2 /* GMForumModel.m */,
+				26AD0F7F1A52D1A900F2FB24 /* GMPlateModel.h */,
+				26AD0F801A52D1A900F2FB24 /* GMPlateModel.m */,
+				26AD0F821A52D1BB00F2FB24 /* GMPlateSubModel.h */,
+				26AD0F831A52D1BB00F2FB24 /* GMPlateSubModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2052,6 +2077,7 @@
 				182E0A7D1A0D09210078AC78 /* GMLoginViewController.m in Sources */,
 				1829FE471A285C7900E7F08B /* GMfourthViewController.m in Sources */,
 				1804F0B81A1EDDC000214B3E /* UIView+Utils.m in Sources */,
+				26AD0F841A52D1BB00F2FB24 /* GMPlateSubModel.m in Sources */,
 				1804F02F1A1EDDBF00214B3E /* EXTScope.m in Sources */,
 				1804F0621A1EDDBF00214B3E /* SDWebImageDownloaderOperation.m in Sources */,
 				1804F0251A1EDDBF00214B3E /* YRSideViewController.m in Sources */,
@@ -2102,6 +2128,7 @@
 				1804F0B21A1EDDC000214B3E /* UIImage+RoundedCorner.m in Sources */,
 				1804F02D1A1EDDBF00214B3E /* split.c in Sources */,
 				26D13EF71A3366E70030ED92 /* GMContentNewsDefaultView.m in Sources */,
+				26AD0F811A52D1A900F2FB24 /* GMPlateModel.m in Sources */,
 				1804F0341A1EDDBF00214B3E /* MTLReflection.m in Sources */,
 				260F5B5B1A51846F00F96FA2 /* GMForumHeadViewListView.m in Sources */,
 				1804F05A1A1EDDBF00214B3E /* DRNRealTimeBlurView.m in Sources */,
@@ -2118,6 +2145,7 @@
 				1804F06D1A1EDDBF00214B3E /* UIView+WebCacheOperation.m in Sources */,
 				1804F01C1A1EDDBF00214B3E /* JCTopic.m in Sources */,
 				1804F0B11A1EDDC000214B3E /* UIImage+Resize.m in Sources */,
+				26AD0F871A52D56000F2FB24 /* GMPlatCell.m in Sources */,
 				1804F0571A1EDDBF00214B3E /* NSNumber+ObjectiveSugar.m in Sources */,
 				1804F01F1A1EDDBF00214B3E /* JTDateMappings.m in Sources */,
 				1804F06B1A1EDDBF00214B3E /* UIImageView+MJWebCache.m in Sources */,
@@ -2163,6 +2191,7 @@
 				1804F0201A1EDDBF00214B3E /* JTMappings.m in Sources */,
 				1804F05C1A1EDDBF00214B3E /* MKAnnotationView+WebCache.m in Sources */,
 				1804F0501A1EDDBF00214B3E /* MojoModel.m in Sources */,
+				26AD0F8A1A52DC8F00F2FB24 /* GMPlatHeadCellView.m in Sources */,
 				1804F0291A1EDDBF00214B3E /* qrencode.c in Sources */,
 				26257F971A3999F200CDAE00 /* GMPhotoView.m in Sources */,
 				269178DC1A320EFA004FF783 /* TopTitleScrollerView.m in Sources */,
@@ -2181,6 +2210,7 @@
 				1804F0211A1EDDBF00214B3E /* JTSetMappings.m in Sources */,
 				26D13EF11A3361120030ED92 /* GMContentImagesView.m in Sources */,
 				1804F0551A1EDDBF00214B3E /* NSDictionary+ObjectiveSugar.m in Sources */,
+				26AD0F7E1A52C99F00F2FB24 /* GMSearchBar.m in Sources */,
 				1804F0601A1EDDBF00214B3E /* SDWebImageDecoder.m in Sources */,
 				1804F0661A1EDDBF00214B3E /* UIButton+WebCache.m in Sources */,
 				1804F0221A1EDDBF00214B3E /* JTValidMappingKey.m in Sources */,

@@ -32,6 +32,9 @@
             [titleView restTopTitleView:result];
             [contentScroll restContentView:result];
             [self restHeadLunBoData];
+        }else
+        {
+            [CustomMethod showWaringMessage:NSLocalizedString(@"服务器数据错误", nil)];
         }
     }];
 }

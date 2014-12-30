@@ -13,6 +13,7 @@
 #import "GMContentNewsScrollModel.h"
 #import "GMNewsReplyModel.h"
 #import "GMForumModel.h"
+#import "GMPlateModel.h"
 @implementation GMHttpRequest
 //获取Dictionary数据
 + (void)getDictionaryWithStringURL:(NSString *)stringURL usingSuccessBlock:(void (^)(NSDictionary *resultDictionary))successBlock andFailureBlock:(void (^)(NSError *resultError))failureBlock
@@ -236,6 +237,26 @@
             
         }
         
+    }
+    successBlock(YES,list);
+}
++(void)getBanKuaiList:(NSInteger)forumID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
+{
+    NSMutableArray *list=[NSMutableArray arrayWithCapacity:0];
+    for (int i=0; i<4; i++) {
+        GMPlateModel *model=[[GMPlateModel alloc]init];
+        model.title=[NSString stringWithFormat:@"板块数据%d",i+1];
+        if (i%2==0) {
+            model.isOpen=YES;
+        }
+        for (int k=0; k<3; k++) {
+            GMPlateSubModel *subModel=[[GMPlateSubModel alloc]init];
+            subModel.image=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+            subModel.title=[NSString stringWithFormat:@"板块数据子内容%d",i+1];
+            subModel.subTitle=[NSString stringWithFormat:@"板块数据子内容副标题%d",i+1];
+            [model.list addObject:subModel];
+        }
+        [list addObject:model];
     }
     successBlock(YES,list);
 }

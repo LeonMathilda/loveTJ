@@ -23,6 +23,7 @@
 +(void)getNewsReplyDetailList:(NSInteger)newsID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 
 +(void)getForumList:(NSInteger)forumID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
++(void)getBanKuaiList:(NSInteger)forumID page:(NSInteger)page usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 +(void)getForumLunBoList:(NSInteger)forumID  usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 +(void)getForumSubList:(NSInteger)forumID  usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock;
 @end
