@@ -14,6 +14,7 @@
 #import "GMPlateModel.h"
 #import "GMPlatCell.h"
 #import "GMPlatHeadCellView.h"
+#import "GMPlatListController.h"
 @interface GMFirstViewController ()<UITableViewDataSource,UITableViewDelegate,GMForumHeadViewDelegate,UISearchBarDelegate,GMPlatHeadCellViewDelegate>
 {
     UISegmentedControl *_segmentedControl;
@@ -291,7 +292,14 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (_segmentedControl.selectedSegmentIndex==1) {
+        GMPlatListController *platListController=[[GMPlatListController alloc]init];
+        platListController.subModel=[[self getCurrentPlatIndex:indexPath.section].list objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:platListController animated:YES];
+    }else
+    {
     [CustomMethod showWaringMessage:NSLocalizedString(@"敬请期待", nil)];
+    }
 }
 -(void)GMForumHeadViewSubTitleClickIndex:(NSInteger)index
 {

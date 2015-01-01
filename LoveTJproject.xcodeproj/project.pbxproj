@@ -267,6 +267,18 @@
 		269178E01A320F07004FF783 /* BaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178DF1A320F07004FF783 /* BaceViewController.m */; };
 		269178E31A320F11004FF783 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E21A320F11004FF783 /* HomePageViewController.m */; };
 		269178E61A320F53004FF783 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178E51A320F53004FF783 /* BaseNavViewController.m */; };
+		269A48101A54EE48006D21A6 /* GMPlatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A480F1A54EE48006D21A6 /* GMPlatListController.m */; };
+		269A48131A54EFA1006D21A6 /* GMPlatListHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A48121A54EFA1006D21A6 /* GMPlatListHeadView.m */; };
+		269A48161A54EFD1006D21A6 /* GMPlatListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A48151A54EFD1006D21A6 /* GMPlatListModel.m */; };
+		269A48191A54F1D9006D21A6 /* GMPlatListTopListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A48181A54F1D9006D21A6 /* GMPlatListTopListModel.m */; };
+		269A481C1A54F231006D21A6 /* GMPlatListSubList.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A481B1A54F231006D21A6 /* GMPlatListSubList.m */; };
+		269A481F1A551C88006D21A6 /* GMPlatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269A481E1A551C88006D21A6 /* GMPlatListCell.m */; };
+		269A48221A5541AD006D21A6 /* luntan_pinglun_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48201A5541AD006D21A6 /* luntan_pinglun_@2x.png */; };
+		269A48231A5541AD006D21A6 /* luntan_pinglun_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48211A5541AD006D21A6 /* luntan_pinglun_@3x.png */; };
+		269A48261A5544FE006D21A6 /* luntan_dianzan_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48241A5544FE006D21A6 /* luntan_dianzan_@2x.png */; };
+		269A48271A5544FE006D21A6 /* luntan_dianzan_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48251A5544FE006D21A6 /* luntan_dianzan_@3x.png */; };
+		269A482A1A554745006D21A6 /* top_fanhui_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48281A554745006D21A6 /* top_fanhui_@2x.png */; };
+		269A482B1A554745006D21A6 /* top_fanhui_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 269A48291A554745006D21A6 /* top_fanhui_@3x.png */; };
 		26AD0F7E1A52C99F00F2FB24 /* GMSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F7D1A52C99F00F2FB24 /* GMSearchBar.m */; };
 		26AD0F811A52D1A900F2FB24 /* GMPlateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F801A52D1A900F2FB24 /* GMPlateModel.m */; };
 		26AD0F841A52D1BB00F2FB24 /* GMPlateSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0F831A52D1BB00F2FB24 /* GMPlateSubModel.m */; };
@@ -745,6 +757,24 @@
 		269178E21A320F11004FF783 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		269178E41A320F53004FF783 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		269178E51A320F53004FF783 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		269A480E1A54EE48006D21A6 /* GMPlatListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListController.h; sourceTree = "<group>"; };
+		269A480F1A54EE48006D21A6 /* GMPlatListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListController.m; sourceTree = "<group>"; };
+		269A48111A54EFA1006D21A6 /* GMPlatListHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListHeadView.h; sourceTree = "<group>"; };
+		269A48121A54EFA1006D21A6 /* GMPlatListHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListHeadView.m; sourceTree = "<group>"; };
+		269A48141A54EFD1006D21A6 /* GMPlatListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListModel.h; sourceTree = "<group>"; };
+		269A48151A54EFD1006D21A6 /* GMPlatListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListModel.m; sourceTree = "<group>"; };
+		269A48171A54F1D9006D21A6 /* GMPlatListTopListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListTopListModel.h; sourceTree = "<group>"; };
+		269A48181A54F1D9006D21A6 /* GMPlatListTopListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListTopListModel.m; sourceTree = "<group>"; };
+		269A481A1A54F231006D21A6 /* GMPlatListSubList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListSubList.h; sourceTree = "<group>"; };
+		269A481B1A54F231006D21A6 /* GMPlatListSubList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListSubList.m; sourceTree = "<group>"; };
+		269A481D1A551C88006D21A6 /* GMPlatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlatListCell.h; sourceTree = "<group>"; };
+		269A481E1A551C88006D21A6 /* GMPlatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPlatListCell.m; sourceTree = "<group>"; };
+		269A48201A5541AD006D21A6 /* luntan_pinglun_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_pinglun_@2x.png"; sourceTree = "<group>"; };
+		269A48211A5541AD006D21A6 /* luntan_pinglun_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_pinglun_@3x.png"; sourceTree = "<group>"; };
+		269A48241A5544FE006D21A6 /* luntan_dianzan_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_dianzan_@2x.png"; sourceTree = "<group>"; };
+		269A48251A5544FE006D21A6 /* luntan_dianzan_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_dianzan_@3x.png"; sourceTree = "<group>"; };
+		269A48281A554745006D21A6 /* top_fanhui_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_fanhui_@2x.png"; sourceTree = "<group>"; };
+		269A48291A554745006D21A6 /* top_fanhui_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_fanhui_@3x.png"; sourceTree = "<group>"; };
 		26AD0F7C1A52C99F00F2FB24 /* GMSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSearchBar.h; sourceTree = "<group>"; };
 		26AD0F7D1A52C99F00F2FB24 /* GMSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSearchBar.m; sourceTree = "<group>"; };
 		26AD0F7F1A52D1A900F2FB24 /* GMPlateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPlateModel.h; sourceTree = "<group>"; };
@@ -1478,6 +1508,8 @@
 		1836227719DE6FC800BC0C65 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				269A48201A5541AD006D21A6 /* luntan_pinglun_@2x.png */,
+				269A48211A5541AD006D21A6 /* luntan_pinglun_@3x.png */,
 				18AEBE8219D3E48A007DA3A9 /* login */,
 				1836227819DE6FC800BC0C65 /* main */,
 			);
@@ -1487,6 +1519,10 @@
 		1836227819DE6FC800BC0C65 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				269A48281A554745006D21A6 /* top_fanhui_@2x.png */,
+				269A48291A554745006D21A6 /* top_fanhui_@3x.png */,
+				269A48241A5544FE006D21A6 /* luntan_dianzan_@2x.png */,
+				269A48251A5544FE006D21A6 /* luntan_dianzan_@3x.png */,
 				2679DD561A35E97F000881C7 /* gm_play.jpg */,
 				265B5C9C1A340AB100D7CD77 /* fanhui@2x.png */,
 				1836227919DE6FC800BC0C65 /* all-bar-blue.png */,
@@ -1535,6 +1571,7 @@
 		183622B619DE702A00BC0C65 /* mainController */ = {
 			isa = PBXGroup;
 			children = (
+				269A480D1A54EDEB006D21A6 /* ForumController */,
 				260F5B551A5181BF00F96FA2 /* ForumView */,
 				2679DD861A35FAC9000881C7 /* popeye.mp4 */,
 				2679DD581A35FA96000881C7 /* ALMoviePlayerController */,
@@ -1601,6 +1638,10 @@
 				26AD0F861A52D56000F2FB24 /* GMPlatCell.m */,
 				26AD0F881A52DC8F00F2FB24 /* GMPlatHeadCellView.h */,
 				26AD0F891A52DC8F00F2FB24 /* GMPlatHeadCellView.m */,
+				269A48111A54EFA1006D21A6 /* GMPlatListHeadView.h */,
+				269A48121A54EFA1006D21A6 /* GMPlatListHeadView.m */,
+				269A481D1A551C88006D21A6 /* GMPlatListCell.h */,
+				269A481E1A551C88006D21A6 /* GMPlatListCell.m */,
 			);
 			path = ForumView;
 			sourceTree = "<group>";
@@ -1769,6 +1810,12 @@
 				26AD0F801A52D1A900F2FB24 /* GMPlateModel.m */,
 				26AD0F821A52D1BB00F2FB24 /* GMPlateSubModel.h */,
 				26AD0F831A52D1BB00F2FB24 /* GMPlateSubModel.m */,
+				269A48141A54EFD1006D21A6 /* GMPlatListModel.h */,
+				269A48151A54EFD1006D21A6 /* GMPlatListModel.m */,
+				269A48171A54F1D9006D21A6 /* GMPlatListTopListModel.h */,
+				269A48181A54F1D9006D21A6 /* GMPlatListTopListModel.m */,
+				269A481A1A54F231006D21A6 /* GMPlatListSubList.h */,
+				269A481B1A54F231006D21A6 /* GMPlatListSubList.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1802,6 +1849,15 @@
 				26D13EF61A3366E70030ED92 /* GMContentNewsDefaultView.m */,
 			);
 			path = scrollerView;
+			sourceTree = "<group>";
+		};
+		269A480D1A54EDEB006D21A6 /* ForumController */ = {
+			isa = PBXGroup;
+			children = (
+				269A480E1A54EE48006D21A6 /* GMPlatListController.h */,
+				269A480F1A54EE48006D21A6 /* GMPlatListController.m */,
+			);
+			path = ForumController;
 			sourceTree = "<group>";
 		};
 		26D13EA91A335BE80030ED92 /* AFNetworking */ = {
@@ -1995,11 +2051,15 @@
 				2679DD7B1A35FA96000881C7 /* movieEndFullscreen@2x.png in Resources */,
 				1804F0411A1EDDBF00214B3E /* MJPhotoBrowser.bundle in Resources */,
 				183622AF19DE6FC800BC0C65 /* zhuce-tishi.png in Resources */,
+				269A482A1A554745006D21A6 /* top_fanhui_@2x.png in Resources */,
 				1836229919DE6FC800BC0C65 /* all-bar-on.png in Resources */,
+				269A48271A5544FE006D21A6 /* luntan_dianzan_@3x.png in Resources */,
 				2679DD871A35FAC9000881C7 /* popeye.mp4 in Resources */,
 				2679DD801A35FA96000881C7 /* movieFullscreen.png in Resources */,
 				183622B319DE6FC800BC0C65 /* zhuce-yonghu.png in Resources */,
 				18AEBE7C19D3D370007DA3A9 /* GMmainLoginViewViewController.xib in Resources */,
+				269A48221A5541AD006D21A6 /* luntan_pinglun_@2x.png in Resources */,
+				269A48231A5541AD006D21A6 /* luntan_pinglun_@3x.png in Resources */,
 				1804F03C1A1EDDBF00214B3E /* 37x-Checkmark.png in Resources */,
 				183622A019DE6FC800BC0C65 /* all-me-blue@2x.png in Resources */,
 				183622B419DE6FC800BC0C65 /* zhuce-yonghu@2x.png in Resources */,
@@ -2018,6 +2078,7 @@
 				2679DD761A35FA96000881C7 /* movieBackward.png in Resources */,
 				183622B019DE6FC800BC0C65 /* zhuce-tishi@2x.png in Resources */,
 				2679DD811A35FA96000881C7 /* movieFullscreen@2x.png in Resources */,
+				269A482B1A554745006D21A6 /* top_fanhui_@3x.png in Resources */,
 				18AEBE8119D3DDCD007DA3A9 /* GMPhoneRegistViewController.xib in Resources */,
 				183622B219DE6FC800BC0C65 /* zhuce-weibo@2x.png in Resources */,
 				183622A219DE6FC800BC0C65 /* all-me-on@2x.png in Resources */,
@@ -2030,6 +2091,7 @@
 				2679DD7A1A35FA96000881C7 /* movieEndFullscreen.png in Resources */,
 				2679DD831A35FA96000881C7 /* moviePause@2x.png in Resources */,
 				1863786519D81F55005A8A51 /* Login.xcassets in Resources */,
+				269A48261A5544FE006D21A6 /* luntan_dianzan_@2x.png in Resources */,
 				2679DD771A35FA96000881C7 /* movieBackward@2x.png in Resources */,
 				183622A619DE6FC800BC0C65 /* all-news-onclick@2x.png in Resources */,
 				2679DD851A35FA96000881C7 /* moviePlay@2x.png in Resources */,
@@ -2072,6 +2134,7 @@
 				1804F0BC1A1EDDC000214B3E /* VPImageCropperViewController.m in Sources */,
 				1804F02E1A1EDDBF00214B3E /* EXTRuntimeExtensions.m in Sources */,
 				1804F02A1A1EDDBF00214B3E /* qrinput.c in Sources */,
+				269A481C1A54F231006D21A6 /* GMPlatListSubList.m in Sources */,
 				1818B3B719BEE6060075C2EA /* GMAppDelegate.m in Sources */,
 				1804F0441A1EDDBF00214B3E /* MJPhotoProgressView.m in Sources */,
 				182E0A7D1A0D09210078AC78 /* GMLoginViewController.m in Sources */,
@@ -2101,6 +2164,7 @@
 				1804F0361A1EDDBF00214B3E /* NSArray+MTLManipulationAdditions.m in Sources */,
 				1804F0271A1EDDBF00214B3E /* mask.c in Sources */,
 				2657FA751A3559BB00B1896E /* GMNewsDetailModel.m in Sources */,
+				269A48191A54F1D9006D21A6 /* GMPlatListTopListModel.m in Sources */,
 				265B5C9B1A3408D600D7CD77 /* GMAddDifferentTitleController.m in Sources */,
 				1804F0281A1EDDBF00214B3E /* QRCodeGenerator.m in Sources */,
 				1804F0421A1EDDBF00214B3E /* MJPhotoBrowser.m in Sources */,
@@ -2160,17 +2224,20 @@
 				1804F05F1A1EDDBF00214B3E /* SDWebImageCompat.m in Sources */,
 				1804F0641A1EDDBF00214B3E /* SDWebImageManager.m in Sources */,
 				1804F0AB1A1EDDC000214B3E /* TMMemoryCache.m in Sources */,
+				269A48131A54EFA1006D21A6 /* GMPlatListHeadView.m in Sources */,
 				2679DD471A35CEA9000881C7 /* GMCommonAndVideoView.m in Sources */,
 				26706CE91A372FDA008C9766 /* GMNewsHeadView.m in Sources */,
 				1804F0591A1EDDBF00214B3E /* NSString+ObjectiveSugar.m in Sources */,
 				2679DD751A35FA96000881C7 /* ALMoviePlayerControls.m in Sources */,
 				1804F03F1A1EDDBF00214B3E /* MBProgressHUD.m in Sources */,
+				269A48101A54EE48006D21A6 /* GMPlatListController.m in Sources */,
 				26D13EDB1A335BE80030ED92 /* AFHTTPClient.m in Sources */,
 				26706CEF1A3732DE008C9766 /* GMNewsReplySubModel.m in Sources */,
 				1804F03B1A1EDDBF00214B3E /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				1804F0A81A1EDDC000214B3E /* SVWebViewController.m in Sources */,
 				1804F0321A1EDDBF00214B3E /* MTLModel+NSCoding.m in Sources */,
 				1804F05D1A1EDDBF00214B3E /* NSData+ImageContentType.m in Sources */,
+				269A481F1A551C88006D21A6 /* GMPlatListCell.m in Sources */,
 				1804F00F1A1EDDBF00214B3E /* UIImageView+LBBlurredImage.m in Sources */,
 				2657FA721A35570700B1896E /* GMNewsDetailViewController.m in Sources */,
 				1804F04F1A1EDDBF00214B3E /* MojoDatabase.m in Sources */,
@@ -2183,6 +2250,7 @@
 				1804F0371A1EDDBF00214B3E /* NSDictionary+MTLManipulationAdditions.m in Sources */,
 				26D13EE21A335BE80030ED92 /* AFXMLRequestOperation.m in Sources */,
 				1804F0B01A1EDDC000214B3E /* UIImage+ColorAtPixel.m in Sources */,
+				269A48161A54EFD1006D21A6 /* GMPlatListModel.m in Sources */,
 				1804F0451A1EDDBF00214B3E /* MJPhotoToolbar.m in Sources */,
 				26D13EDF1A335BE80030ED92 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				260F5B581A5181DA00F96FA2 /* GMForumHeadView.m in Sources */,

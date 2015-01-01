@@ -32,4 +32,5 @@
 #import "MJRefresh.h"
 //#import "AGViewDelegate.h"
 #define MAIN_HEAD_URL @"http://za.tjfer.com/appapi"
+#define GM_HIGHTTEXT_COLOR [UIColor colorWithRed:18.0/255.0 green:141.0/255.0 blue:230.0/255.0 alpha:1]
 #endif

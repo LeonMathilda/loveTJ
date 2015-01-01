@@ -282,4 +282,40 @@
     }
     successBlock(YES,list);
 }
++(void)getPlatList:(NSInteger )platID usingSuccessBlock:(void (^)(BOOL isSuccess,GMPlatListModel  *result))successBlock
+{
+    GMPlatListModel *platList=[[GMPlatListModel alloc]init];
+    platList.platID=@"1";
+    platList.platFlowNum=@"2345";
+    platList.platIsFollowing=@"0";
+    platList.platHasNotice=@"1";
+    platList.platNum=@"6666";
+    platList.platTitle=@"天津杂谈";
+    platList.platImage=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+    for (int i=0; i<5; i++) {
+        GMPlatListTopListModel *topModel=[[GMPlatListTopListModel alloc]init];
+        topModel.platTitle=[NSString stringWithFormat:@"【置顶数据】测试数据-测试数据-测试数据%d",i+1];
+        topModel.platID=@"2";
+        [platList.platTopList addObject:topModel];
+    }
+    for (int i=0; i<10; i++) {
+        GMPlatListSubList *suBlist=[[GMPlatListSubList alloc]init];
+        suBlist.platImageTotalCount=@"4";
+        suBlist.platIsPrasied=@"0";
+        suBlist.platTitle=@"【标题内容】";
+        suBlist.platUserAvatar=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+        suBlist.platUserID=@"1";
+        suBlist.PlatUserName=@"Jerry Li";
+        suBlist.platUserTime=@"一小时前";
+        suBlist.platContent=@"这里有什么好玩的，大叔，你要带我去哪里，带我飞吗.这里有什么好玩的，大叔，你要带我去哪里，带我飞吗.这里有什么好玩的，大叔，你要带我去哪里，带我飞吗。。fly to sky";
+        if (i%3==0) {
+            for (int k=0; k<3; k++) {
+                [suBlist.platImageList addObject:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg"];
+            }
+        }
+        [platList.platList addObject:suBlist];
+    }
+    successBlock(YES,platList);
+    
+}
 @end
