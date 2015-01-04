@@ -15,6 +15,7 @@
 #import "GMPlatCell.h"
 #import "GMPlatHeadCellView.h"
 #import "GMPlatListController.h"
+#import "GMEmailViewController.h"
 @interface GMFirstViewController ()<UITableViewDataSource,UITableViewDelegate,GMForumHeadViewDelegate,UISearchBarDelegate,GMPlatHeadCellViewDelegate>
 {
     UISegmentedControl *_segmentedControl;
@@ -29,8 +30,14 @@
 
 @implementation GMFirstViewController
 
+-(void)BaseControllerClickNavRightButton:(id)sender
+{
+    GMEmailViewController *emailController=[[GMEmailViewController alloc]init];
+    [self.navigationController pushViewController:emailController animated:YES];
+}
 - (void)viewDidLoad
 {
+    [self showRightButton:YES withNomoralImage:@"luntan_xinxi_@2x" HighlightedImage:nil title:nil ];
     list=[[NSMutableArray alloc]init];
     _isSearch=NO;
     _searchList=[[NSMutableArray alloc]initWithCapacity:0];

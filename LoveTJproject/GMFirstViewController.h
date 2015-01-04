@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GMFirstViewController : UIViewController
+#import "BaceViewController.h"
+@interface GMFirstViewController : BaceViewController
 
 @end

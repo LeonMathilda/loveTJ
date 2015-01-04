@@ -10,5 +10,7 @@
 
 @interface BaceViewController : UIViewController
 -(void)showBackButton;
+-(void)showRightButton:(BOOL)showRight withNomoralImage:(NSString *)strNomoralImage HighlightedImage:(NSString *)HighlightedImage title:(NSString *)title;
 -(void)BaseClickBackButton:(id)sender;
+-(void)BaseControllerClickNavRightButton:(id)sender;
 @end

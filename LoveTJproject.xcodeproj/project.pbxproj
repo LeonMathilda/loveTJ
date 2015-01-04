@@ -256,6 +256,12 @@
 		2679DD851A35FA96000881C7 /* moviePlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2679DD711A35FA96000881C7 /* moviePlay@2x.png */; };
 		2679DD871A35FAC9000881C7 /* popeye.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2679DD861A35FAC9000881C7 /* popeye.mp4 */; };
 		2687D15D1A3ECA5900195D17 /* GMPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2687D15C1A3ECA5900195D17 /* GMPhotoScrollView.m */; };
+		268EC5CD1A59DBD4004F478A /* fatie_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268EC5CB1A59DBD4004F478A /* fatie_@2x.png */; };
+		268EC5CE1A59DBD4004F478A /* fatie_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268EC5CC1A59DBD4004F478A /* fatie_@3x.png */; };
+		268EC5D11A59DC34004F478A /* GMFaTieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EC5D01A59DC34004F478A /* GMFaTieViewController.m */; };
+		268EC5D41A59E0B9004F478A /* luntan_xinxi_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268EC5D21A59E0B9004F478A /* luntan_xinxi_@2x.png */; };
+		268EC5D51A59E0B9004F478A /* luntan_xinxi_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268EC5D31A59E0B9004F478A /* luntan_xinxi_@3x.png */; };
+		268EC5D81A59E1A0004F478A /* GMEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EC5D71A59E1A0004F478A /* GMEmailViewController.m */; };
 		2691786F1A31E646004FF783 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2691786E1A31E646004FF783 /* Launch Screen.xib */; };
 		269178CE1A320EEE004FF783 /* ITTBaseModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178C91A320EEE004FF783 /* ITTBaseModelObject.m */; };
 		269178CF1A320EEE004FF783 /* TopTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269178CB1A320EEE004FF783 /* TopTitleModel.m */; };
@@ -736,6 +742,14 @@
 		2679DD861A35FAC9000881C7 /* popeye.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = popeye.mp4; sourceTree = "<group>"; };
 		2687D15B1A3ECA5900195D17 /* GMPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhotoScrollView.h; sourceTree = "<group>"; };
 		2687D15C1A3ECA5900195D17 /* GMPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhotoScrollView.m; sourceTree = "<group>"; };
+		268EC5CB1A59DBD4004F478A /* fatie_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fatie_@2x.png"; sourceTree = "<group>"; };
+		268EC5CC1A59DBD4004F478A /* fatie_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fatie_@3x.png"; sourceTree = "<group>"; };
+		268EC5CF1A59DC34004F478A /* GMFaTieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMFaTieViewController.h; sourceTree = "<group>"; };
+		268EC5D01A59DC34004F478A /* GMFaTieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMFaTieViewController.m; sourceTree = "<group>"; };
+		268EC5D21A59E0B9004F478A /* luntan_xinxi_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_xinxi_@2x.png"; sourceTree = "<group>"; };
+		268EC5D31A59E0B9004F478A /* luntan_xinxi_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luntan_xinxi_@3x.png"; sourceTree = "<group>"; };
+		268EC5D61A59E1A0004F478A /* GMEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMEmailViewController.h; sourceTree = "<group>"; };
+		268EC5D71A59E1A0004F478A /* GMEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMEmailViewController.m; sourceTree = "<group>"; };
 		2691786E1A31E646004FF783 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		269178C81A320EEE004FF783 /* ITTBaseModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTBaseModelObject.h; sourceTree = "<group>"; };
 		269178C91A320EEE004FF783 /* ITTBaseModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTBaseModelObject.m; sourceTree = "<group>"; };
@@ -1519,6 +1533,8 @@
 		1836227819DE6FC800BC0C65 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				268EC5D21A59E0B9004F478A /* luntan_xinxi_@2x.png */,
+				268EC5D31A59E0B9004F478A /* luntan_xinxi_@3x.png */,
 				269A48281A554745006D21A6 /* top_fanhui_@2x.png */,
 				269A48291A554745006D21A6 /* top_fanhui_@3x.png */,
 				269A48241A5544FE006D21A6 /* luntan_dianzan_@2x.png */,
@@ -1543,6 +1559,8 @@
 				1836228819DE6FC800BC0C65 /* all-news-onclick@2x.png */,
 				1836228919DE6FC800BC0C65 /* news-terms.png */,
 				1836228A19DE6FC800BC0C65 /* news-terms@2x.png */,
+				268EC5CB1A59DBD4004F478A /* fatie_@2x.png */,
+				268EC5CC1A59DBD4004F478A /* fatie_@3x.png */,
 				1836228B19DE6FC800BC0C65 /* zhuce-mima.png */,
 				1836228C19DE6FC800BC0C65 /* zhuce-mima@2x.png */,
 				1836228D19DE6FC800BC0C65 /* zhuce-shouji.png */,
@@ -1856,6 +1874,10 @@
 			children = (
 				269A480E1A54EE48006D21A6 /* GMPlatListController.h */,
 				269A480F1A54EE48006D21A6 /* GMPlatListController.m */,
+				268EC5CF1A59DC34004F478A /* GMFaTieViewController.h */,
+				268EC5D01A59DC34004F478A /* GMFaTieViewController.m */,
+				268EC5D61A59E1A0004F478A /* GMEmailViewController.h */,
+				268EC5D71A59E1A0004F478A /* GMEmailViewController.m */,
 			);
 			path = ForumController;
 			sourceTree = "<group>";
@@ -2054,10 +2076,12 @@
 				269A482A1A554745006D21A6 /* top_fanhui_@2x.png in Resources */,
 				1836229919DE6FC800BC0C65 /* all-bar-on.png in Resources */,
 				269A48271A5544FE006D21A6 /* luntan_dianzan_@3x.png in Resources */,
+				268EC5CD1A59DBD4004F478A /* fatie_@2x.png in Resources */,
 				2679DD871A35FAC9000881C7 /* popeye.mp4 in Resources */,
 				2679DD801A35FA96000881C7 /* movieFullscreen.png in Resources */,
 				183622B319DE6FC800BC0C65 /* zhuce-yonghu.png in Resources */,
 				18AEBE7C19D3D370007DA3A9 /* GMmainLoginViewViewController.xib in Resources */,
+				268EC5D51A59E0B9004F478A /* luntan_xinxi_@3x.png in Resources */,
 				269A48221A5541AD006D21A6 /* luntan_pinglun_@2x.png in Resources */,
 				269A48231A5541AD006D21A6 /* luntan_pinglun_@3x.png in Resources */,
 				1804F03C1A1EDDBF00214B3E /* 37x-Checkmark.png in Resources */,
@@ -2066,6 +2090,7 @@
 				182E0A7E1A0D09210078AC78 /* GMLoginViewController.storyboard in Resources */,
 				26D13EE81A335BE80030ED92 /* zbar-samples.png in Resources */,
 				183622AD19DE6FC800BC0C65 /* zhuce-sousuo.png in Resources */,
+				268EC5D41A59E0B9004F478A /* luntan_xinxi_@2x.png in Resources */,
 				183622AC19DE6FC800BC0C65 /* zhuce-shouji@2x.png in Resources */,
 				183622AB19DE6FC800BC0C65 /* zhuce-shouji.png in Resources */,
 				183622A919DE6FC800BC0C65 /* zhuce-mima.png in Resources */,
@@ -2084,6 +2109,7 @@
 				183622A219DE6FC800BC0C65 /* all-me-on@2x.png in Resources */,
 				183622A519DE6FC800BC0C65 /* all-news-onclick.png in Resources */,
 				26D13EFF1A336ADC0030ED92 /* click_n.png in Resources */,
+				268EC5CE1A59DBD4004F478A /* fatie_@3x.png in Resources */,
 				1836229F19DE6FC800BC0C65 /* all-me-blue.png in Resources */,
 				1804F0A71A1EDDC000214B3E /* SVWebViewController.bundle in Resources */,
 				1818B3B119BEE6060075C2EA /* InfoPlist.strings in Resources */,
@@ -2187,6 +2213,7 @@
 				1804F0A41A1EDDC000214B3E /* QCSlideSwitchView.m in Sources */,
 				1804F01B1A1EDDBF00214B3E /* pinyin.c in Sources */,
 				1804F0391A1EDDBF00214B3E /* NSObject+MTLComparisonAdditions.m in Sources */,
+				268EC5D11A59DC34004F478A /* GMFaTieViewController.m in Sources */,
 				1804F0401A1EDDBF00214B3E /* MJPhoto.m in Sources */,
 				269178DD1A320EFA004FF783 /* TopTitleView.m in Sources */,
 				1804F0B21A1EDDC000214B3E /* UIImage+RoundedCorner.m in Sources */,
@@ -2209,6 +2236,7 @@
 				1804F06D1A1EDDBF00214B3E /* UIView+WebCacheOperation.m in Sources */,
 				1804F01C1A1EDDBF00214B3E /* JCTopic.m in Sources */,
 				1804F0B11A1EDDC000214B3E /* UIImage+Resize.m in Sources */,
+				268EC5D81A59E1A0004F478A /* GMEmailViewController.m in Sources */,
 				26AD0F871A52D56000F2FB24 /* GMPlatCell.m in Sources */,
 				1804F0571A1EDDBF00214B3E /* NSNumber+ObjectiveSugar.m in Sources */,
 				1804F01F1A1EDDBF00214B3E /* JTDateMappings.m in Sources */,

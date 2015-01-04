@@ -7,7 +7,10 @@
 //
 
 #import "BaceViewController.h"
-
+#define chuMianUI_RightClickPlace 0
+#define chuMianUI_LeftClickPlace 0
+#define chuMianUI_RightColor   [UIColor darkGrayColor]
+#define chuMianUI_RightClickColor [UIColor colorWithRed:180.0f/255.0f green:180.0f/255.0 blue:188.0/255.0 alpha:1]
 @interface BaceViewController ()
 
 @end
@@ -30,6 +33,56 @@
 {
     [super loadView];
 }
+-(void)showRightButton:(BOOL)showRight withNomoralImage:(NSString *)strNomoralImage HighlightedImage:(NSString *)HighlightedImage title:(NSString *)title
+{
+    if (showRight) {
+        UIButton* navigationRightBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+        navigationRightBtn.frame=CGRectMake(0, 0, 138/2, 88/2);
+        
+        [navigationRightBtn addTarget:self action:@selector(BaseControllerClickNavRightButton:) forControlEvents:UIControlEventTouchUpInside];
+        navigationRightBtn.hidden=NO;
+        if (strNomoralImage) {
+            [navigationRightBtn setImage:[UIImage imageNamed:strNomoralImage] forState:UIControlStateNormal];
+        }
+        if (HighlightedImage) {
+            [navigationRightBtn setImage:[UIImage imageNamed:HighlightedImage] forState:UIControlStateHighlighted];
+        }
+        navigationRightBtn.frame=CGRectMake(self.view.frame.size.width-chuMianUI_LeftClickPlace-chuMianUI_RightClickPlace-navigationRightBtn.currentImage.size.width/2, 0, chuMianUI_LeftClickPlace+chuMianUI_RightClickPlace+navigationRightBtn.currentImage.size.width/2, 44);
+        navigationRightBtn.frame=CGRectMake(0, 0, chuMianUI_LeftClickPlace+chuMianUI_RightClickPlace+navigationRightBtn.currentImage.size.width/2, 44);
+        navigationRightBtn.imageEdgeInsets=UIEdgeInsetsMake((navigationRightBtn.frame.size.height-navigationRightBtn.currentImage.size.height/2)/2, chuMianUI_LeftClickPlace, (navigationRightBtn.frame.size.height-navigationRightBtn.currentImage.size.height/2)/2,chuMianUI_RightClickPlace);
+        
+        if (title) {
+            
+    
+            navigationRightBtn.frame = CGRectMake(self.view.frame.size.width-165/2, 0, 165/2, 43);
+            [navigationRightBtn setTitleColor:chuMianUI_RightColor forState:UIControlStateNormal];
+            [navigationRightBtn setTitle:title forState:UIControlStateNormal];
+            [navigationRightBtn setTitleColor:chuMianUI_RightClickColor forState:UIControlStateHighlighted];
+            navigationRightBtn.backgroundColor=[UIColor clearColor];
+            [navigationRightBtn.titleLabel sizeToFit];
+            navigationRightBtn.frame=CGRectMake(0, 0, navigationRightBtn.titleLabel.frame.size.width, navigationRightBtn.titleLabel.frame.size.height);
+        }
+        
+        UIBarButtonItem *bar=[[UIBarButtonItem alloc] initWithCustomView:navigationRightBtn];
+        
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                           target:nil action:nil];
+        if (IOS7_OR_LATER) {
+            negativeSpacer.width=-5;
+        }else
+        {
+            negativeSpacer.width=3;
+        }
+        self.navigationItem.rightBarButtonItems=[NSArray arrayWithObjects:negativeSpacer,bar, nil];
+        
+    }else
+    {
+        self.navigationItem.rightBarButtonItems=nil;
+        
+    }
+
+}
 -(void)showBackButton
 {
     UIButton *navigationLeftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -50,6 +103,10 @@
     self.navigationItem.leftBarButtonItems=[NSArray arrayWithObjects:negativeSpacer,bar, nil];
 }
 -(void)BaseClickBackButton:(id)sender
+{
+    
+}
+-(void)BaseControllerClickNavRightButton:(id)sender
 {
     
 }

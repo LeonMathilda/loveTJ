@@ -10,6 +10,7 @@
 #import "GMPlatListModel.h"
 #import "GMPlatListHeadView.h"
 #import "GMPlatListCell.h"
+#import "GMFaTieViewController.h"
 @interface GMPlatListController ()<UITableViewDataSource,UITableViewDelegate>
 {
     GMPlatListModel *listModel;
@@ -44,8 +45,15 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)BaseControllerClickNavRightButton:(id)sender
+{
+    GMFaTieViewController *fatieController=[[GMFaTieViewController alloc]init];
+    fatieController.subModel=self.subModel;
+    [self.navigationController pushViewController:fatieController animated:YES];
+}
 - (void)viewDidLoad {
     [self showBackButton];
+    [self showRightButton:YES withNomoralImage:@"fatie_@2x" HighlightedImage:nil title:nil];
     self.title=self.subModel.title;
     self.view.backgroundColor=[UIColor whiteColor];
     mTableView=[[UITableView alloc]init];
