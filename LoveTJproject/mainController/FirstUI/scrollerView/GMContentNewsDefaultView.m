@@ -43,7 +43,7 @@
     GMContentNewsButtomView *buttomView=[[GMContentNewsButtomView alloc]init];
     buttomView.backgroundColor=[UIColor clearColor];
     [buttomView restModel:model];
-    buttomView.frame=CGRectMake([UIScreen mainScreen].bounds.size.width-150-GMContentNewsCell_Default_left, iamgeView.frame.size.height+iamgeView.frame.origin.x-20, 150, 20);
+    buttomView.frame=CGRectMake([UIScreen mainScreen].bounds.size.width-150-GMContentNewsCell_Default_left, iamgeView.frame.size.height+iamgeView.frame.origin.x-15, 150, 20);
     [self addSubview:buttomView];
 
 }

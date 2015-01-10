@@ -9,5 +9,16 @@
 #import "GMContentNewsModel.h"
 
 @implementation GMContentNewsModel
-
+- (NSDictionary*)attributeMapDictionary
+{
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            @"nid",@"newsID"
+            ,@"content",@"newsContent"
+            ,@"new_title",@"newsTitle"
+            ,@"p_pic",@"newsHeadPath"
+            ,@"ntype",@"newsClass"
+            ,@"pic_news_arr",@"newsImages"
+            ,@"modifydate",@"newsTime"
+            ,nil];
+}
 @end

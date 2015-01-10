@@ -35,7 +35,7 @@
 -(void)restModel:(GMContentNewsModel *)model;
 {
     titleClase.frame=CGRectMake(0, 0, 0, 0);
-    if (model.newsClass) {
+    if (model.newsClass&&model.newsClass.length&&![model.newsClass isEqualToString:@"无"]) {
          titleClase.text=model.newsClass;
         [titleClase sizeToFit];
         titleClase.frame=CGRectMake(0, 0, titleClase.frame.size.width+3, titleClase.frame.size.height+3);

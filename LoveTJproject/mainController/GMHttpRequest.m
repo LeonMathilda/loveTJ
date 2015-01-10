@@ -87,24 +87,53 @@
 }
 +(void)getTitleDetailList:(NSInteger)titleID usingSuccessBlock:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
 {
-    NSMutableArray *list=[NSMutableArray  arrayWithCapacity:0];
-    for (int i=0; i<10; i++) {
-        GMContentNewsModel *model=[[GMContentNewsModel alloc]init];
-        model.newsTitle=@"测试数据标题";
-        model.newsID=[NSString stringWithFormat:@"%d",i+1];
-        model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
-        model.newsReplyCount=@"303.3万";
-        model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
-        if (i%5==0) {
-            model.newsImages=[NSMutableArray arrayWithObjects:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg", nil];
-            model.newsImageCount=@"8";
+//    NSMutableArray *list=[NSMutableArray  arrayWithCapacity:0];
+//    for (int i=0; i<10; i++) {
+//        GMContentNewsModel *model=[[GMContentNewsModel alloc]init];
+//        model.newsTitle=@"测试数据标题";
+//        model.newsID=[NSString stringWithFormat:@"%d",i+1];
+//        model.newsHeadPath=@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg";
+//        model.newsReplyCount=@"303.3万";
+//        model.newsContent=@"dafadsfjalsdjfalskdjflaksjdflkasjdflkasjdflka";
+//        if (i%5==0) {
+//            model.newsImages=[NSMutableArray arrayWithObjects:@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg",@"http://wenwen.soso.com/p/20100620/20100620142034-985774128.jpg", nil];
+//            model.newsImageCount=@"8";
+//        }
+//        if (i%3==0) {
+//            model.newsClass=@"独家";
+//        }
+//        [list addObject:model];
+//    }
+//    successBlock(YES,list);
+    
+    NSString *stringURL = [NSString stringWithFormat:@"%@/getnewslist?cid=%d",MAIN_HEAD_URL,titleID];
+    [GMHttpRequest getDictionaryWithStringURL:stringURL usingSuccessBlock:^(NSDictionary *resultDictionary) {
+        
+        if ([resultDictionary objectForKey:@"s"]&&0 == [[resultDictionary objectForKey:@"s" ]  integerValue]) {
+            NSArray *data=[resultDictionary objectForKey:@"data"];
+            NSMutableArray *list=[[NSMutableArray alloc]init];
+            if (data&&[data isKindOfClass:[NSArray class]]) {
+                for (NSDictionary *dic  in data) {
+                    GMContentNewsModel *model=[[GMContentNewsModel alloc]initWithDataDic:dic];
+                    if (model.newsImages.count>0) {
+                        model.newsImageCount=[NSString stringWithFormat:@"%d",model.newsImages.count];
+                    }
+                    model.newsReplyCount=@"2345";
+                    
+                    [list addObject:model];
+                }
+            }
+            successBlock(YES,list);
+            
+        }else{
+            successBlock(NO,nil);
+            [CustomMethod showWaringMessage:[resultDictionary objectForKey:@"msg"]];
         }
-        if (i%3==0) {
-            model.newsClass=@"独家";
-        }
-        [list addObject:model];
-    }
-    successBlock(YES,list);
+        
+    } andFailureBlock:^(NSError *resultError) {
+        successBlock(NO,nil);
+    }];
+
 
 }
 +(void)getLunBoList:(void (^)(BOOL isSuccess,NSMutableArray  *result))successBlock
